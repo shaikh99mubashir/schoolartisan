@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="5" fill="#1648F4"/>
+  <!-- Scaled 3-block staircase for small size -->
+  <rect x="3" y="3" width="12" height="12" fill="white"/>
+  <rect x="11" y="11" width="9" height="9" fill="white"/>
+  <rect x="17" y="17" width="12" height="12" fill="white"/>
+  <!-- Cutouts -->
+  <rect x="5" y="5" width="8" height="8" fill="#1648F4"/>
+  <rect x="19" y="19" width="8" height="8" fill="#1648F4"/>
+</svg>
