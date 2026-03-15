@@ -258,6 +258,7 @@ export default function DashboardSection() {
   return (
     <section ref={sectionRef} className="bg-black w-full">
       {/* Heading */}
+      
       <div className="text-center pt-20 pb-10 px-6">
         <h2 className="text-3xl lg:text-4xl font-medium text-white">
           {["Your", "Dashboard,"].map((word, i) => (
