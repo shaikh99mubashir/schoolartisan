@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npx shadcn@latest init --yes)",
       "Bash(npm install:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(gh repo:*)",
+      "Bash(git push:*)"
     ]
   }
 }
