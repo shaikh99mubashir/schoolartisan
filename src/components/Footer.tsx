@@ -3,15 +3,19 @@ import { gsap } from "@/lib/gsap";
 import { ArrowUp } from "lucide-react";
 
 const platformLinks = [
-  "Home",
-  "How It Works",
-  "Features",
-  "Testimonials",
-  "FAQs",
-  "Contact Us",
+  { label: "Home", href: "/#hero" },
+  { label: "School ERP", href: "/#school-erp" },
+  { label: "Features", href: "/#features" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Testimonials", href: "/#testimonials" },
+  { label: "FAQs", href: "/#faqs" },
+  { label: "Contact Us", href: "/#contact" },
 ];
 
-const resourceLinks = ["Privacy Policy", "Terms & Conditions"];
+const resourceLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
+];
 
 export default function Footer() {
   const footerRef = useRef<HTMLElement>(null);
@@ -78,7 +82,7 @@ export default function Footer() {
           {/* Left: Headline */}
           <div className="lg:col-span-1 flex flex-col justify-between">
             <h2 className="text-3xl lg:text-4xl font-medium leading-tight text-gray-900">
-              {["Ready", "To", "Scale"].map((word, i) => (
+              {["Ready", "To", "Digitize"].map((word, i) => (
                 <span
                   key={i}
                   className="footer-word text-gray-900 inline-block"
@@ -90,9 +94,9 @@ export default function Footer() {
               <span className="footer-word text-primary inline-block">Your</span>
               <br />
               <span className="footer-word text-secondary inline-block" style={{ marginRight: "0.25em" }}>
-                Ad
+                School
               </span>
-              <span className="footer-word text-primary inline-block">Campaigns?</span>
+              <span className="footer-word text-primary inline-block">Management?</span>
             </h2>
           </div>
 
@@ -101,12 +105,12 @@ export default function Footer() {
             <h4 className="footer-link text-sm font-semibold text-gray-900 mb-5">Platform</h4>
             <ul className="flex flex-col gap-3">
               {platformLinks.map((link) => (
-                <li key={link} className="footer-link">
+                <li key={link.label} className="footer-link">
                   <a
-                    href="#"
+                    href={link.href}
                     className="text-sm text-gray-400 hover:text-gray-700 transition-colors"
                   >
-                    {link}
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -118,12 +122,12 @@ export default function Footer() {
             <h4 className="footer-link text-sm font-semibold text-gray-900 mb-5">Resources</h4>
             <ul className="flex flex-col gap-3">
               {resourceLinks.map((link) => (
-                <li key={link} className="footer-link">
+                <li key={link.label} className="footer-link">
                   <a
-                    href="#"
+                    href={link.href}
                     className="text-sm text-gray-400 hover:text-gray-700 transition-colors"
                   >
-                    {link}
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -134,7 +138,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="footer-bottom mt-14 flex items-center justify-between border-t border-gray-200 pt-6">
           <p className="text-xs text-gray-400">
-            © 2025 Smart Media Marketing. All rights reserved.
+            © 2025 School Artisan. All rights reserved.
           </p>
           <button
             onClick={scrollToTop}

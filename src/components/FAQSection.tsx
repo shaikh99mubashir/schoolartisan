@@ -9,29 +9,29 @@ import {
 
 const faqs = [
   {
-    question: "What is Smart Media Marketing?",
+    question: "What is School Artisan?",
     answer:
-      "Smart Media is a performance marketing platform that offers agency-level ad accounts, curated media deals, landing page tools, and omnichannel ad campaign management—all in one place.",
+      "School Artisan is an all-in-one school management system (School ERP) and website solution that lets you manage admissions, attendance, fees, exams, results, circulars and parent communication from a single platform.",
   },
   {
-    question: "Who is this platform for?",
+    question: "Which types of institutions is this system suitable for?",
     answer:
-      "Smart Media is built for digital marketers, media buyers, marketing agencies, and brands of all sizes who want to scale their advertising without the headaches of managing multiple ad accounts.",
+      "The platform is designed for private schools, academies, colleges, daycare centers, Islamic schools, coaching centers and multi-branch school networks—with the ability to scale from a few students to thousands.",
   },
   {
-    question: "Do I need my own ad accounts to run campaigns?",
+    question: "Do parents get a mobile / web portal?",
     answer:
-      "No. Smart Media provides agency-level ad accounts on TikTok, Meta, Snapchat, and more. You simply set your budget and we handle the rest—no bans, no limits.",
+      "Yes, parents get dedicated access where they can view their child&apos;s attendance, homework, announcements, fee status, exam results and the school calendar.",
   },
   {
-    question: "Is there a free trial or free access?",
+    question: "Do you provide training and ongoing support?",
     answer:
-      "Yes! You can sign up for free with no upfront costs. You only pay your ad budget plus our 10% management fee when you launch campaigns.",
+      "We provide training for teachers and office staff during implementation, and offer ongoing support via WhatsApp, calls and remote sessions.",
   },
   {
-    question: "What about contracts, proposals, and billing?",
+    question: "How does the pricing work?",
     answer:
-      "Smart Media includes built-in tools for creating proposals, managing contracts, sending invoices, and tracking billing—all from your unified dashboard.",
+      "Pricing is customized based on your student strength, required modules (ERP, website, SMS/WhatsApp) and number of branches. You&apos;ll receive a detailed quotation after the demo.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function FAQSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full py-20 px-6 lg:px-12 bg-white">
+    <section id="faqs" ref={sectionRef} className="w-full py-20 px-6 lg:px-12 bg-white">
       <div className="max-w-3xl mx-auto">
         <h2
           className="faq-heading text-4xl lg:text-5xl font-medium text-center mb-14"

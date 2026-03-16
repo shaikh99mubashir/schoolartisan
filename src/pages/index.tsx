@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import PlatformSection from "@/components/PlatformSection";
@@ -11,17 +12,45 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-      <Header />
-      <HeroSection />
-      <PlatformSection />
-      <FeaturesSection />
-      <HowItWorksSection />
-      <TestimonialsSection />
-      <DashboardSection />
-      <FAQSection />
-      <CTASection />
-      <Footer />
-    </main>
+    <>
+      <Head>
+        <title>
+          School Artisan – School Management System & School Website Solutions
+        </title>
+        <meta
+          name="description"
+          content="School Artisan is an all-in-one school management system and website solution for schools. Manage attendance, fees, exams, results and parent communication from one simple dashboard."
+        />
+        <meta
+          name="keywords"
+          content="school management system, school ERP, school software, school website, online fees, student attendance, exam management, result management"
+        />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="School Artisan – Smart School Management System"
+        />
+        <meta
+          property="og:description"
+          content="Digitize your school with a modern School ERP: attendance, fees, exams, report cards and parent app – all in one place."
+        />
+        <meta property="og:url" content="https://schoolartisan.com/" />
+        <meta property="og:site_name" content="School Artisan" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <main className="min-h-screen bg-white">
+        <Header />
+        <HeroSection />
+        <PlatformSection />
+        <FeaturesSection />
+        <HowItWorksSection />
+        <TestimonialsSection />
+        <DashboardSection />
+        <FAQSection />
+        <CTASection />
+        <Footer />
+      </main>
+    </>
   );
 }

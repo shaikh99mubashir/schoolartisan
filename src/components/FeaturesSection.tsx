@@ -1,44 +1,44 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
-import { Megaphone, CreditCard, LayoutTemplate, BarChart2, Target, Users } from "lucide-react";
+import { GraduationCap, UserCheck, CreditCard, LayoutTemplate, BarChart2, Users } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const features: { icon: LucideIcon; title: string; description: string }[] = [
   {
-    icon: Megaphone,
-    title: "Launch\nWinning Ads",
+    icon: GraduationCap,
+    title: "Complete\nSchool ERP",
     description:
-      "Run campaigns on TikTok, Facebook, Snapchat & Instagram—powered by verified agency accounts.",
+      "Admissions, student records, classes, sections and staff management—everything in one cloud-based system.",
   },
   {
     icon: CreditCard,
-    title: "Zero Setup\nHassles",
+    title: "Online Fees\n& Billing",
     description:
-      "No ad account bans, no hidden fees—simply set your ad budget, pay 10%, and we'll handle the rest.",
+      "Streamline fee collection with reminders, auto-generated receipts and detailed finance reports—no more manual cash registers.",
   },
   {
     icon: LayoutTemplate,
-    title: "Custom Landing\nPages",
+    title: "Modern\nSchool Website",
     description:
-      "Build link-in-bio pages, add QR CTAs, embed WhatsApp & forms—no coding required.",
+      "An SEO-friendly school website where you can easily manage courses, gallery, notices, admission forms and results.",
   },
   {
     icon: BarChart2,
-    title: "Real-Time\nAnalytics",
+    title: "Real-Time\nReports",
     description:
-      "Monitor impressions, spend, conversions, and ROI live from your unified dashboard.",
+      "Ready-made dashboards and MIS reports for attendance, fees, exam results and staff performance—built for principals.",
   },
   {
-    icon: Target,
-    title: "Omnichannel\nCampaigns",
+    icon: UserCheck,
+    title: "Attendance\n& Exams",
     description:
-      "Coordinate onsite native ads, offsite programmatic, and in-store promotions—all in one place.",
+      "Daily attendance with parent alerts, exam schedules, marks entry and auto-generated report cards (PDF).",
   },
   {
     icon: Users,
-    title: "Collaborate\n& Scale",
+    title: "Parents\n& Teachers App",
     description:
-      "Assign tasks, track progress, add sub-users, and manage all your client projects seamlessly.",
+      "Dedicated access for parents and teachers: real-time homework, announcements, fee status, results and simple daily workflows.",
   },
 ];
 
@@ -90,11 +90,11 @@ export default function FeaturesSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full py-20 px-6 lg:px-12 bg-white">
+    <section id="features" ref={sectionRef} className="w-full py-20 px-6 lg:px-12 bg-white">
       {/* Heading */}
       <div className="text-center mb-14">
         <h2 className="text-4xl lg:text-5xl font-medium leading-tight">
-          {["Every", "Tool", "You", "Need"].map((word, i) => (
+          {["Every", "Tool", "Your", "School", "Needs"].map((word, i) => (
             <span
               key={i}
               className="features-word inline-block"
@@ -109,7 +109,7 @@ export default function FeaturesSection() {
             </span>
           ))}
           <br />
-          {["for", "Campaign", "Success"].map((word, i) => (
+          {["for", "Smart", "Management"].map((word, i) => (
             <span
               key={i}
               className="features-word text-gray-900 inline-block"
@@ -120,8 +120,8 @@ export default function FeaturesSection() {
           ))}
         </h2>
         <p className="features-sub mt-5 text-gray-500 text-sm leading-relaxed max-w-md mx-auto">
-          From setup to scale, Smart Media Marketing handles it all—just add
-          your ad budget + our 10% management fee.
+          Whether you run a small private school or a large campus, School Artisan makes your
+          <strong> daily operations simple, transparent and trackable</strong>.
         </p>
       </div>
 

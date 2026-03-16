@@ -5,9 +5,9 @@ import { gsap } from "@/lib/gsap";
 const steps = [
   {
     number: "01",
-    title: "Sign Up & Setup",
+    title: "Share Your School Details",
     description:
-      "Register for free, connect your profile, and access your dashboard in under 60 seconds.",
+      "Our team understands your school structure (branches, classes, sections, fee heads, exams) and prepares a tailored setup for you.",
     imagePosition: "right",
     imageBg: "from-blue-100 via-blue-50 to-blue-200",
     imageContent: (
@@ -30,9 +30,9 @@ const steps = [
   },
   {
     number: "02",
-    title: "Launch Campaigns",
+    title: "We Configure Your ERP & Website",
     description:
-      "Pick your platform (TikTok, Meta, Snapchat), set your ad budget, and deploy via our agency accounts.",
+      "Within a few days we configure your School ERP, user roles and permissions, SMS/WhatsApp templates and a modern school website.",
     imagePosition: "left",
     imageBg: "from-blue-50 via-blue-100 to-blue-200",
     imageContent: (
@@ -55,9 +55,9 @@ const steps = [
   },
   {
     number: "03",
-    title: "Monitor & Optimize",
+    title: "Train Your Staff & Go Live",
     description:
-      "Track real-time metrics, view performance analytics, and let us handle the optimization for you.",
+      "Teachers, office staff and management receive short training—then you start using live attendance, fees, exams and the parent portal on day one.",
     imagePosition: "right",
     imageBg: "from-blue-100 via-blue-50 to-blue-200",
     imageContent: (
@@ -143,6 +143,7 @@ export default function HowItWorksSection() {
 
   return (
     <section
+      id="how-it-works"
       ref={sectionRef}
       className="w-full py-20 px-6 lg:px-12 bg-white overflow-hidden"
     >

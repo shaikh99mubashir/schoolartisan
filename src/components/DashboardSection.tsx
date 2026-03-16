@@ -28,12 +28,12 @@ const InvoicesCard = () => (
   <MockupCard>
     <div className="p-3 text-[9px]">
       <div className="grid grid-cols-3 gap-2 text-blue-500 font-semibold border-b border-gray-100 pb-1 mb-2">
-        <span>ID ↕</span><span>Date ↕</span><span>Due ↕</span>
+        <span>Receipt No. ↕</span><span>Date ↕</span><span>Amount ↕</span>
       </div>
       {[
-        ["INV-000053", "18-12-2024", "18-12-2024"],
-        ["INV-000008", "21-10-2024", "26-10-2024"],
-        ["INV-000007", "21-10-2024", "28-10-2024"],
+        ["FEE-000421", "18-12-2024", "Rs. 12,000"],
+        ["FEE-000389", "21-10-2024", "Rs. 8,500"],
+        ["FEE-000377", "21-10-2024", "Rs. 9,000"],
       ].map((r, i) => (
         <div key={i} className="grid grid-cols-3 gap-2 py-1 border-b border-gray-50">
           <span className="text-blue-400 truncate">{r[0]}</span>
@@ -50,9 +50,9 @@ const ActivityCard = () => (
     <div className="p-3">
       <p className="text-[9px] font-semibold text-gray-700 mb-2">Latest Activity</p>
       {[
-        { label: "CRM", sub: "Changed task status (Task #11)", tag: "Completed", time: "1 week ago" },
-        { label: "CRM", sub: "Changed task status (Task #10)", tag: "Awaiting Feedback", time: "2 weeks ago" },
-        { label: "Customer", sub: "Refunded TikTok Campaign", tag: null, time: "3 months ago" },
+        { label: "Attendance", sub: "Class 5-B marked present (32/33)", tag: "Synced", time: "10 min ago" },
+        { label: "Fees", sub: "Monthly fee collected for 18 students", tag: "Posted", time: "1 hour ago" },
+        { label: "Exams", sub: "Mid Term result published for Class 8-A", tag: null, time: "Yesterday" },
       ].map((a, i) => (
         <div key={i} className="flex gap-2 mb-2">
           <div className="w-5 h-5 rounded-full bg-gray-200 shrink-0 mt-0.5 flex items-center justify-center">
@@ -79,9 +79,9 @@ const StatsCard = () => (
   <MockupCard>
     <div className="p-3 flex flex-col gap-2.5">
       {[
-        { value: "1", label: "Projects Completed", bar: "bg-teal-400", iconBg: "bg-teal-100", dot: "bg-teal-400" },
-        { value: "$0.00", label: "Invoices Due", bar: "bg-orange-400", iconBg: "bg-orange-100", dot: "bg-orange-400" },
-        { value: "$0.00", label: "Invoices Overdue", bar: "bg-red-400", iconBg: "bg-red-100", dot: "bg-red-400" },
+        { value: "1,240", label: "Total Students", bar: "bg-teal-400", iconBg: "bg-teal-100", dot: "bg-teal-400" },
+        { value: "96.4%", label: "Avg. Attendance", bar: "bg-orange-400", iconBg: "bg-orange-100", dot: "bg-orange-400" },
+        { value: "Rs. 4.2M", label: "Fee Collected", bar: "bg-red-400", iconBg: "bg-red-100", dot: "bg-red-400" },
       ].map((s, i) => (
         <div key={i} className="flex items-center justify-between">
           <div>
@@ -102,12 +102,12 @@ const CustomersCard = () => (
   <MockupCard>
     <div className="p-3 text-[9px]">
       <div className="grid grid-cols-2 gap-2 text-blue-500 font-semibold border-b border-gray-100 pb-1 mb-2">
-        <span>Name ↕</span><span>Client ↕</span>
+        <span>Name ↕</span><span>Class ↕</span>
       </div>
       {[
-        ["Customer One ★", "IBSPoint Sol..."],
-        ["Customer Two", "IBSPoint Sol..."],
-        ["TikTok Customer", "IBSPoint Sol..."],
+        ["Ali Raza ★", "Class 5-B"],
+        ["Ayesha Noor", "Class 8-A"],
+        ["Hamza Khan", "Class 10-A"],
       ].map((r, i) => (
         <div key={i} className="grid grid-cols-2 gap-2 py-1.5 border-b border-gray-50 items-center">
           <div className="flex items-center gap-1">
@@ -124,7 +124,7 @@ const CustomersCard = () => (
 const UserFormCard = () => (
   <MockupCard>
     <div className="p-3 text-[9px]">
-      <p className="text-[10px] font-semibold text-gray-700 mb-2">Create A New User</p>
+      <p className="text-[10px] font-semibold text-gray-700 mb-2">Add New Student</p>
       {["First Name*", "Last Name*", "Email Address*"].map((f) => (
         <div key={f} className="mb-1.5">
           <p className="text-gray-500 mb-0.5">{f}</p>
@@ -155,45 +155,39 @@ const PhoneMockup = () => (
           <div className="w-5 h-5 bg-teal-100 rounded-full" />
         </div>
       </div>
-      <h3 className="text-sm font-semibold text-gray-900 mb-1">Ad details</h3>
-      <p className="text-[9px] text-gray-600 mb-3">Use TikTok account to deliver Spark Ads</p>
+      <h3 className="text-sm font-semibold text-gray-900 mb-1">Class Summary</h3>
+      <p className="text-[9px] text-gray-600 mb-3">Class 5-B · Section Blue · Class Teacher: Ms. Ayesha</p>
       <div className="border border-blue-400 rounded-lg p-2 mb-2 bg-blue-50">
         <div className="flex items-center gap-1.5 mb-0.5">
           <div className="w-3 h-3 rounded-full bg-blue-500 border-2 border-white ring-1 ring-blue-500" />
-          <p className="text-[10px] font-semibold text-gray-800">Single video</p>
+          <p className="text-[10px] font-semibold text-gray-800">Today&apos;s Attendance</p>
         </div>
-        <p className="text-[8px] text-gray-500 ml-4">Create an ad with one video or multiple</p>
+        <p className="text-[8px] text-gray-500 ml-4">Present: 32 · Absent: 1 · Late: 0</p>
       </div>
-      <div className="border border-gray-200 rounded-lg p-2 mb-3 bg-white">
+      <div className="border border-gray-200 rounded-lg p-2 mb-2 bg-white">
         <div className="flex items-center gap-1.5 mb-0.5">
           <div className="w-3 h-3 rounded-full border border-gray-300" />
-          <p className="text-[10px] font-semibold text-gray-800">Carousel Images</p>
+          <p className="text-[10px] font-semibold text-gray-800">Fee Overview</p>
         </div>
-        <p className="text-[8px] text-gray-500 ml-4">1-35 images in a carousel</p>
+        <p className="text-[8px] text-gray-500 ml-4">Paid: 27 students · Pending: 6 students</p>
       </div>
-      <p className="text-[9px] text-gray-700 font-semibold mb-1">Video *</p>
-      <div className="flex items-center gap-1 mb-3 border border-gray-300 rounded p-1">
-        <div className="bg-gray-200 text-[8px] px-1.5 py-0.5 rounded">Choose File</div>
-        <span className="text-[8px] text-gray-400">No file chosen</span>
+      <div className="border border-gray-200 rounded-lg p-2 mb-2 bg-white">
+        <div className="flex items-center gap-1.5 mb-0.5">
+          <div className="w-3 h-3 rounded-full border border-gray-300" />
+          <p className="text-[10px] font-semibold text-gray-800">Upcoming Exam</p>
+        </div>
+        <p className="text-[8px] text-gray-500 ml-4">Mid Term · Mathematics · 10:00 AM · 25 March</p>
       </div>
-      <button className="w-full border border-gray-300 rounded text-[9px] py-1.5 text-gray-600 mb-3">
-        Choose from library
-      </button>
-      <p className="text-[9px] text-gray-700 font-semibold mb-1">Text</p>
+      <p className="text-[9px] text-gray-700 font-semibold mb-1">Announcements</p>
       <div className="border border-gray-200 rounded p-1.5 mb-3">
-        <p className="text-[8px] text-gray-300">Enter ad text</p>
-      </div>
-      <p className="text-[9px] text-gray-700 font-semibold mb-1">Call to action *</p>
-      <div className="border border-gray-200 rounded p-1.5 mb-3 flex items-center justify-between">
-        <p className="text-[9px] text-gray-600">Apply Now</p>
-        <span className="text-gray-400 text-[10px]">▾</span>
+        <p className="text-[8px] text-gray-300">Type message to students/parents…</p>
       </div>
       <div className="flex gap-2">
         <button className="flex-1 bg-blue-500 text-white text-[9px] py-1.5 rounded-md font-semibold">
-          Save as Draft
+          Send to Parents
         </button>
-        <button className="flex-1 bg-red-500 text-white text-[9px] py-1.5 rounded-md font-semibold">
-          Publish
+        <button className="flex-1 bg-gray-900 text-white text-[9px] py-1.5 rounded-md font-semibold">
+          Mark Attendance
         </button>
       </div>
     </div>
@@ -261,7 +255,7 @@ export default function DashboardSection() {
       
       <div className="text-center pt-20 pb-10 px-6">
         <h2 className="text-3xl lg:text-4xl font-medium text-white">
-          {["Your", "Dashboard,"].map((word, i) => (
+          {["Your", "School", "Dashboard,"].map((word, i) => (
             <span
               key={i}
               className="dash-word text-white inline-block"

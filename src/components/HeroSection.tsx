@@ -213,6 +213,7 @@ export default function HeroSection() {
 
   return (
     <section
+      id="hero"
       ref={sectionRef}
       className="relative w-full min-h-[88vh] flex items-center overflow-hidden bg-gray-50"
       style={{
@@ -226,14 +227,13 @@ export default function HeroSection() {
         <div className="flex flex-col gap-6 z-10">
           <h1 className="text-5xl lg:text-6xl font-medium leading-tight tracking-tight text-gray-900">
             {[
-              "Fuel",
-              "Your",
-              "Brand",
-              "Growth",
-              "An",
-              "Impactful,",
-              "Strategic",
-              "Platform",
+              "All-in-One",
+              "School",
+              "Management",
+              "System",
+              "For",
+              "Modern",
+              "Schools",
             ].map((word, i) => (
               <span
                 key={i}
@@ -247,29 +247,33 @@ export default function HeroSection() {
 
           <div className="flex flex-col gap-4">
             <p className="hero-text text-gray-700 text-sm leading-relaxed max-w-md">
-              We help you build high-performing sales channels on the
-              world&apos;s most <strong>influential platforms</strong>—driving
-              revenue through a blend of organic discovery and targeted paid
-              campaigns.
+              School Artisan is a modern <strong>School ERP and website solution</strong> that digitizes your entire campus—
+              from admissions and student records to daily attendance, fees, exams and report cards, all in one dashboard.
             </p>
             <p className="hero-text text-gray-500 text-sm leading-relaxed max-w-md">
-              Supercharge your reach with curated,{" "}
-              <strong>brand-safe deals from premium publishers</strong>—and
-              unlock unlimited agency ad accounts to scale without bans.
+              Give principals, teachers and parents separate logins with
+              <strong> transparent communication, real-time reports</strong> and
+              a professional school website that strengthens your institution&apos;s image.
             </p>
           </div>
 
           <div className="flex items-center gap-4 flex-wrap">
-            <button className="hero-btn bg-primary hover:bg-primary-dark text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm">
-              Join Now For Free
-            </button>
-            <button className="hero-btn border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm">
-              Contact Us
-            </button>
+            <a
+              href="/contact?type=demo"
+              className="hero-btn bg-primary hover:bg-primary-dark text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm inline-flex items-center justify-center"
+            >
+              Request Free Demo
+            </a>
+            <a
+              href="/contact?type=contact"
+              className="hero-btn border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm inline-flex items-center justify-center"
+            >
+              Talk To Our Team
+            </a>
           </div>
 
           <p className="hero-text text-gray-400 text-xs">
-            Scale smarter with no upfront costs.
+            Trusted by 50+ schools to simplify their day-to-day operations.
           </p>
         </div>
 

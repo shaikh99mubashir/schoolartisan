@@ -12,34 +12,34 @@ const MiniPhone = () => (
           <div className="w-4 h-4 bg-teal-100 rounded-full" />
         </div>
       </div>
-      <p className="text-[9px] font-semibold text-gray-800">Ad details</p>
-      <div className="w-7 h-3 bg-gray-300 rounded-full" />
-      <p className="text-[7px] text-gray-500">Use TikTok account to deliver Spark Ads</p>
+      <p className="text-[9px] font-semibold text-gray-800">Student details</p>
+      <div className="w-14 h-3 bg-gray-300 rounded-full" />
+      <p className="text-[7px] text-gray-500">View profile, attendance and fee status</p>
       <div className="border border-blue-400 rounded-lg p-1.5 bg-blue-50">
         <div className="flex items-center gap-1 mb-0.5">
           <div className="w-2 h-2 rounded-full bg-blue-500" />
-          <p className="text-[8px] font-semibold text-gray-800">Single video</p>
+          <p className="text-[8px] font-semibold text-gray-800">Today&apos;s Attendance</p>
         </div>
-        <p className="text-[7px] text-gray-500 ml-3">Create an ad with one video or multiple</p>
+        <p className="text-[7px] text-gray-500 ml-3">Present: 24 · Absent: 1 · Late: 0</p>
       </div>
       <div className="border border-gray-200 rounded-lg p-1.5">
         <div className="flex items-center gap-1 mb-0.5">
           <div className="w-2 h-2 rounded-full border border-gray-300" />
-          <p className="text-[8px] font-semibold text-gray-800">Carousel Images</p>
+          <p className="text-[8px] font-semibold text-gray-800">Fee Status</p>
         </div>
-        <p className="text-[7px] text-gray-500 ml-3">Create an ad with 1-35 images, displayed in a carousel</p>
+        <p className="text-[7px] text-gray-500 ml-3">Paid: Rs. 25,000 · Pending: Rs. 3,000</p>
       </div>
-      <p className="text-[8px] text-gray-700 font-semibold mt-1">Video *</p>
+      <p className="text-[8px] text-gray-700 font-semibold mt-1">Homework</p>
       <div className="flex items-center gap-1 border border-gray-200 rounded p-1">
-        <span className="text-[7px] bg-gray-100 px-1 py-0.5 rounded">Choose File</span>
-        <span className="text-[7px] text-gray-400">No file chosen</span>
+        <span className="text-[7px] bg-gray-100 px-1 py-0.5 rounded">Maths · Chapter 3</span>
+        <span className="text-[7px] text-gray-400">Due: Tomorrow</span>
       </div>
       <div className="border border-gray-200 rounded p-1 text-center">
-        <p className="text-[8px] text-gray-500">Choose from library</p>
+        <p className="text-[8px] text-gray-500">View full homework details</p>
       </div>
-      <p className="text-[8px] text-gray-700 font-semibold">Text</p>
+      <p className="text-[8px] text-gray-700 font-semibold">Messages</p>
       <div className="border border-gray-200 rounded p-1">
-        <p className="text-[7px] text-gray-300">Enter ad text</p>
+        <p className="text-[7px] text-gray-300">Type message to class teacher</p>
       </div>
     </div>
   </div>
@@ -59,19 +59,19 @@ const MiniDashboard = () => (
             <p className="text-[5px] text-gray-400">وجهتك نحو الريادة</p>
           </div>
         </div>
-        {["Dashboard", "Campaigns", "Landing Pages", "Projects", "Billing", "Proposals", "Contracts", "Users", "Support", "Knowledgebase"].map((item) => (
-          <div key={item} className={`flex items-center gap-1 px-1.5 py-0.5 rounded text-[7px] ${item === "Campaigns" ? "bg-blue-50 text-blue-600 font-semibold" : "text-gray-400"}`}>
-            <div className={`w-2 h-2 rounded-sm ${item === "Campaigns" ? "bg-blue-400" : "bg-gray-200"}`} />
+        {["Dashboard", "Students", "Attendance", "Fees", "Exams", "Homework", "Staff", "Classes", "Communication", "Settings"].map((item) => (
+          <div key={item} className={`flex items-center gap-1 px-1.5 py-0.5 rounded text-[7px] ${item === "Dashboard" ? "bg-blue-50 text-blue-600 font-semibold" : "text-gray-400"}`}>
+            <div className={`w-2 h-2 rounded-sm ${item === "Dashboard" ? "bg-blue-400" : "bg-gray-200"}`} />
             {item}
           </div>
         ))}
       </div>
       <div className="flex-1 bg-gray-50 p-2">
-        <p className="text-blue-500 text-[8px] font-semibold">TikTok Campaigns</p>
-        <p className="text-[6px] text-gray-400 mb-1">APP › TIKTOK CAMPAIGNS</p>
-        <p className="text-[7px] text-red-400 mb-2">The highlighted campaigns are drafted campaign</p>
+        <p className="text-blue-500 text-[8px] font-semibold">Today&apos;s Attendance</p>
+        <p className="text-[6px] text-gray-400 mb-1">DASHBOARD › CLASS SUMMARY</p>
+        <p className="text-[7px] text-green-500 mb-2">Live data synced from teacher app</p>
         <div className="grid grid-cols-3 gap-1 mb-2">
-          {[["3","Total Campaigns"],["$210.00","Budget"],["$3,340","Spent"]].map(([v,l]) => (
+          {[["1,240","Total Students"],["1,195","Present"],["45","Absent/Leave"]].map(([v,l]) => (
             <div key={l}>
               <p className="text-[8px] font-semibold text-gray-800">{v}</p>
               <p className="text-[6px] text-gray-400">{l}</p>
@@ -81,9 +81,9 @@ const MiniDashboard = () => (
         </div>
         <div className="bg-white rounded border border-gray-100">
           <div className="grid grid-cols-4 px-1.5 py-1 border-b border-gray-100">
-            {["Title","Type","Budget","Spent"].map(h => <p key={h} className="text-[6px] text-blue-400">{h}</p>)}
+            {["Class","Present","Absent","Fee Status"].map(h => <p key={h} className="text-[6px] text-blue-400">{h}</p>)}
           </div>
-          {[["Sami test","Traffic","$50","$0"],["احمد الكرخي","Web Conv.","$0","$3,340"],["Sami Test 2","Web Conv.","$160","$0"]].map((r,i) => (
+          {[["Nursery A","24","1","80% Paid"],["Class 5-B","32","1","92% Paid"],["Class 10-A","35","0","76% Paid"]].map((r,i) => (
             <div key={i} className="grid grid-cols-4 px-1.5 py-1 border-b border-gray-50">
               {r.map((c,j) => <p key={j} className={`text-[6px] truncate ${j===0?"text-blue-400":"text-gray-500"}`}>{c}</p>)}
             </div>
@@ -155,6 +155,7 @@ export default function CTASection() {
 
   return (
     <section
+      id="contact"
       ref={sectionRef}
       className="w-full py-16 px-6 lg:px-12 bg-gray-50 relative overflow-hidden"
       style={{
@@ -171,7 +172,7 @@ export default function CTASection() {
         {/* Center Text */}
         <div className="flex flex-col items-center text-center gap-6 flex-1 max-w-lg mx-auto">
           <h2 className="text-4xl lg:text-5xl font-medium leading-tight">
-            {["See", "It", "In", "Action"].map((word, i) => (
+            {["See", "Your", "School", "Go", "Digital"].map((word, i) => (
               <span
                 key={i}
                 className="cta-word inline-block"
@@ -187,17 +188,19 @@ export default function CTASection() {
             ))}
           </h2>
           <p className="cta-content text-gray-600 text-sm leading-relaxed">
-            <strong>Experience the full power of Smart Media.</strong> Get a
-            personalized walkthrough of how to{" "}
+            <strong>See School Artisan in action.</strong> In a short live demo we&apos;ll show you how you can{" "}
             <strong>
-              launch high-performing campaigns, scale with agency accounts, and
-              grow across platforms
+              manage attendance, fees, exams, report cards, the parent portal and your school website
+              from one simple dashboard
             </strong>
-            —risk-free.
+            —without any heavy IT setup.
           </p>
-          <button className="cta-content bg-primary hover:bg-primary-dark text-white font-semibold px-10 py-3.5 rounded-full transition-colors text-sm">
-            Join Now For Free
-          </button>
+          <a
+            href="/contact"
+            className="cta-content bg-primary hover:bg-primary-dark text-white font-semibold px-10 py-3.5 rounded-full transition-colors text-sm inline-flex items-center justify-center"
+          >
+            Book Free School Demo
+          </a>
         </div>
 
         {/* Right Dashboard */}
