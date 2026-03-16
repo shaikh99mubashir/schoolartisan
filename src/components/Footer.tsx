@@ -4,8 +4,9 @@ import { ArrowUp } from "lucide-react";
 
 const platformLinks = [
   "Home",
-  "How It Works",
   "Features",
+  "Modules",
+  "How It Works",
   "Testimonials",
   "FAQs",
   "Contact Us",
@@ -78,7 +79,7 @@ export default function Footer() {
           {/* Left: Headline */}
           <div className="lg:col-span-1 flex flex-col justify-between">
             <h2 className="text-3xl lg:text-4xl font-medium leading-tight text-gray-900">
-              {["Ready", "To", "Scale"].map((word, i) => (
+              {["Ready", "To", "Transform"].map((word, i) => (
                 <span
                   key={i}
                   className="footer-word text-gray-900 inline-block"
@@ -90,9 +91,9 @@ export default function Footer() {
               <span className="footer-word text-primary inline-block">Your</span>
               <br />
               <span className="footer-word text-secondary inline-block" style={{ marginRight: "0.25em" }}>
-                Ad
+                School
               </span>
-              <span className="footer-word text-primary inline-block">Campaigns?</span>
+              <span className="footer-word text-primary inline-block">Today?</span>
             </h2>
           </div>
 
@@ -134,7 +135,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="footer-bottom mt-14 flex items-center justify-between border-t border-gray-200 pt-6">
           <p className="text-xs text-gray-400">
-            © 2025 Smart Media Marketing. All rights reserved.
+            © 2025 School Artisan. All rights reserved.
           </p>
           <button
             onClick={scrollToTop}

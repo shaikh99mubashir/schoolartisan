@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Bell, User, Users, BookOpen, ClipboardCheck, BookCopy, Monitor, Download, GraduationCap, Video, CalendarDays, BookMarked, UserCheck, List, Calendar, FileText, Check } from "lucide-react";
 import { gsap } from "@/lib/gsap";
+import Image from "next/image";
 
 // Schoolly app icon item
 const AppIcon = ({
@@ -40,15 +41,7 @@ const SchoollyPhoneMockup = () => (
 
         {/* Logo */}
         <div className="flex items-center gap-1">
-          <div className="w-6 h-6 bg-blue-700 rounded-full flex items-center justify-center">
-            <GraduationCap size={14} color="white" />
-          </div>
-          <span
-            className="text-[11px] font-extrabold"
-            style={{ color: "#1e40af" }}
-          >
-            School Artisan
-          </span>
+            <Image src="/images/logo.png" alt="School Artisan" width={80} height={24} />
         </div>
 
         {/* Bell */}
@@ -212,106 +205,107 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative w-full min-h-[88vh] flex items-center overflow-hidden bg-gray-50"
-      style={{
-        backgroundImage:
-          "radial-gradient(circle, #c4c4c4 1px, transparent 1px)",
-        backgroundSize: "24px 24px",
-      }}
-    >
-      <div className="max-w-8xl mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center py-16">
-        {/* Left Content */}
-        <div className="flex flex-col gap-6 z-10">
-          <h1 className="text-5xl lg:text-6xl font-medium leading-tight tracking-tight text-gray-900">
-            {[
-              "Fuel",
-              "Your",
-              "Brand",
-              "Growth",
-              "An",
-              "Impactful,",
-              "Strategic",
-              "Platform",
-            ].map((word, i) => (
-              <span
-                key={i}
-                className="hero-word inline-block"
-                style={{ marginRight: "0.25em" }}
-              >
-                {word}
-              </span>
-            ))}
-          </h1>
+    <section className="px-5">
+      <section
+        ref={sectionRef}
+        className="relative w-full min-h-[88vh] border border-gray-200 rounded-4xl flex items-center overflow-hidden bg-gray-50"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, #c4c4c4 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        }}
+      >
+        <div className="max-w-400 mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center py-16">
+          {/* Left Content */}
+          <div className="flex flex-col gap-6 z-10">
+            <h1 className="text-5xl lg:text-6xl font-medium leading-tight tracking-tight text-gray-900">
+              {[
+                "Run",
+                "Your",
+                "School",
+                "Smarter",
+                "With",
+                "One",
+                "Powerful",
+                "Platform",
+              ].map((word, i) => (
+                <span
+                  key={i}
+                  className="hero-word inline-block"
+                  style={{ marginRight: "0.25em" }}
+                >
+                  {word}
+                </span>
+              ))}
+            </h1>
 
-          <div className="flex flex-col gap-4">
-            <p className="hero-text text-gray-700 text-sm leading-relaxed max-w-md">
-              We help you build high-performing sales channels on the
-              world&apos;s most <strong>influential platforms</strong>—driving
-              revenue through a blend of organic discovery and targeted paid
-              campaigns.
+            <div className="flex flex-col gap-4">
+              <p className="hero-text text-gray-700 text-sm leading-relaxed max-w-md">
+                School Artisan is a complete school management system designed for{" "}
+                <strong>K-12 schools, colleges, and coaching centers</strong>—
+                managing students, staff, fees, attendance, and academics all in one place.
+              </p>
+              <p className="hero-text text-gray-500 text-sm leading-relaxed max-w-md">
+                Empower teachers, keep parents informed, and give administrators{" "}
+                <strong>full visibility over every aspect of school operations</strong>—from
+                admissions to final exams.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-4 flex-wrap">
+              <button className="hero-btn bg-primary hover:bg-primary-dark text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm">
+                Request Free Demo
+              </button>
+              <button className="hero-btn border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm">
+                View Features
+              </button>
+            </div>
+
+            <p className="hero-text text-gray-400 text-xs">
+              Trusted by schools across the country. No upfront costs.
             </p>
-            <p className="hero-text text-gray-500 text-sm leading-relaxed max-w-md">
-              Supercharge your reach with curated,{" "}
-              <strong>brand-safe deals from premium publishers</strong>—and
-              unlock unlimited agency ad accounts to scale without bans.
-            </p>
           </div>
 
-          <div className="flex items-center gap-4 flex-wrap">
-            <button className="hero-btn bg-primary hover:bg-primary-dark text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm">
-              Join Now For Free
-            </button>
-            <button className="hero-btn border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm">
-              Contact Us
-            </button>
-          </div>
-
-          <p className="hero-text text-gray-400 text-xs">
-            Scale smarter with no upfront costs.
-          </p>
-        </div>
-
-        {/* Right - Schoolly Phone Mockup */}
-        <div className="hero-phone relative flex justify-center items-center z-10">
-          {/* Floating Students Card */}
-          <div className="hero-card absolute -left-2 top-1/4 bg-white rounded-2xl shadow-lg px-3 py-2.5 flex items-center gap-2.5 z-20 border border-gray-100">
-            <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
-              <Users size={16} color="#3b82f6" />
+          {/* Right - Schoolly Phone Mockup */}
+          <div className="hero-phone max-w-100 mx-auto w-full relative flex justify-center items-center z-10">
+            {/* Floating Students Card */}
+            <div className="hero-card absolute -left-2 top-1/4 bg-white rounded-2xl shadow-lg px-3 py-2.5 flex items-center gap-2.5 z-20 border border-gray-100">
+              <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                <Users size={16} color="#3b82f6" />
+              </div>
+              <div>
+                <p className="text-[9px] text-gray-500">Total Students</p>
+                <p className="text-xs font-bold text-gray-900">1,240</p>
+              </div>
             </div>
-            <div>
-              <p className="text-[9px] text-gray-500">Total Students</p>
-              <p className="text-xs font-bold text-gray-900">1,240</p>
-            </div>
-          </div>
 
-          {/* Phone */}
-          <SchoollyPhoneMockup />
+            {/* Phone */}
+            <SchoollyPhoneMockup />
 
-          {/* Floating Attendance Card */}
-          <div className="hero-card absolute -right-2 top-1/3 bg-white rounded-2xl shadow-lg px-3 py-2.5 flex items-center gap-2.5 z-20 border border-gray-100">
-            <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-              <Check size={16} color="#22c55e" />
+            {/* Floating Attendance Card */}
+            <div className="hero-card absolute -right-2 top-1/3 bg-white rounded-2xl shadow-lg px-3 py-2.5 flex items-center gap-2.5 z-20 border border-gray-100">
+              <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+                <Check size={16} color="#22c55e" />
+              </div>
+              <div>
+                <p className="text-[9px] text-gray-500">Attendance</p>
+                <p className="text-xs font-bold text-gray-900">96.4%</p>
+              </div>
             </div>
-            <div>
-              <p className="text-[9px] text-gray-500">Attendance</p>
-              <p className="text-xs font-bold text-gray-900">96.4%</p>
-            </div>
-          </div>
 
-          {/* Floating Exam Card */}
-          <div className="hero-card absolute bottom-6 left-1/2 -translate-x-1/2 bg-primary rounded-2xl shadow-lg px-4 py-2.5 flex items-center gap-3 z-20">
-            <div className="w-7 h-7 rounded-lg bg-white/20 flex items-center justify-center">
-              <FileText size={16} color="white" />
-            </div>
-            <div>
-              <p className="text-white font-semibold text-xs">Exam Today</p>
-              <p className="text-blue-200 text-[9px]">Mathematics – 10:00 AM</p>
+            {/* Floating Exam Card */}
+            <div className="hero-card absolute bottom-6 left-1/2 -translate-x-1/2 bg-primary rounded-2xl shadow-lg px-4 py-2.5 flex items-center gap-3 z-20">
+              <div className="w-7 h-7 rounded-lg bg-white/20 flex items-center justify-center">
+                <FileText size={16} color="white" />
+              </div>
+              <div>
+                <p className="text-white font-semibold text-xs">Exam Today</p>
+                <p className="text-blue-200 text-[9px]">Mathematics – 10:00 AM</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
   );
 }

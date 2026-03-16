@@ -1,83 +1,10 @@
 import { useEffect, useRef } from "react";
-import { Check, User, CheckCircle, Smartphone, Rocket, MessageCircle, Megaphone, Play } from "lucide-react";
+import Link from "next/link";
 import { gsap } from "@/lib/gsap";
+import { allSteps } from "@/lib/howItWorksData";
+import { ArrowRight } from "lucide-react";
 
-const steps = [
-  {
-    number: "01",
-    title: "Sign Up & Setup",
-    description:
-      "Register for free, connect your profile, and access your dashboard in under 60 seconds.",
-    imagePosition: "right",
-    imageBg: "from-blue-100 via-blue-50 to-blue-200",
-    imageContent: (
-      <div className="relative w-full h-full flex items-center justify-center">
-        <div className="w-24 h-24 rounded-full bg-blue-200 flex items-center justify-center">
-          <User size={48} color="#3b82f6" />
-        </div>
-        <div className="absolute top-6 right-8 bg-green-500 rounded-full w-10 h-10 flex items-center justify-center shadow-lg">
-          <Check size={20} color="white" />
-        </div>
-        <div className="absolute bottom-10 left-8 flex items-center gap-1 bg-white/60 rounded-full px-3 py-1">
-          <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-            <User size={12} color="white" />
-          </div>
-          <Check size={16} color="#22c55e" />
-        </div>
-      </div>
-    ),
-    connectorColor: "stroke-blue-300",
-  },
-  {
-    number: "02",
-    title: "Launch Campaigns",
-    description:
-      "Pick your platform (TikTok, Meta, Snapchat), set your ad budget, and deploy via our agency accounts.",
-    imagePosition: "left",
-    imageBg: "from-blue-50 via-blue-100 to-blue-200",
-    imageContent: (
-      <div className="relative w-full h-full flex items-center justify-center">
-        <div className="w-24 h-24 rounded-2xl bg-blue-200 flex items-center justify-center"><Smartphone size={48} color="#3b82f6" /></div>
-        <div className="absolute top-6 left-6 w-8 h-8 bg-blue-500 rounded-lg" />
-        <div className="absolute top-8 right-10">
-          <div className="bg-orange-400 rounded-xl px-2 py-1 text-white text-xs font-semibold flex items-center gap-1">
-            <><Rocket size={12} /> ADS</>
-          </div>
-        </div>
-        <div className="absolute bottom-8 right-8">
-          <div className="bg-red-500 rounded-lg px-2 py-0.5 text-white text-xs font-semibold">
-            ADS
-          </div>
-        </div>
-      </div>
-    ),
-    connectorColor: "stroke-purple-300",
-  },
-  {
-    number: "03",
-    title: "Monitor & Optimize",
-    description:
-      "Track real-time metrics, view performance analytics, and let us handle the optimization for you.",
-    imagePosition: "right",
-    imageBg: "from-blue-100 via-blue-50 to-blue-200",
-    imageContent: (
-      <div className="relative w-full h-full flex items-center justify-center gap-2">
-        <div className="w-16 h-16 rounded-full bg-blue-200 flex items-center justify-center"><User size={32} color="#3b82f6" /></div>
-        <div className="w-16 h-16 rounded-full bg-purple-200 flex items-center justify-center"><User size={32} color="#9333ea" /></div>
-        <div className="absolute top-6 right-8"><MessageCircle size={28} color="#3b82f6" /></div>
-        <div className="absolute top-8 right-20"><Megaphone size={24} color="#f97316" /></div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-gray-200 rounded-xl px-4 py-2 flex items-center gap-2">
-          <div className="w-5 h-5 flex items-center justify-center">
-            <Play size={16} className="fill-primary text-primary" />
-          </div>
-          <div className="w-2 h-2 rounded-full bg-yellow-400" />
-          <div className="w-2 h-2 rounded-full bg-purple-500" />
-        </div>
-      </div>
-    ),
-    connectorColor: null,
-  },
-];
+const steps = allSteps.slice(0, 3);
 
 export default function HowItWorksSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -109,7 +36,6 @@ export default function HowItWorksSection() {
         },
       });
 
-      // Each step animates in from alternating sides
       document.querySelectorAll(".hiw-step").forEach((step, i) => {
         const fromLeft = i % 2 === 0;
         gsap.from(step, {
@@ -143,6 +69,7 @@ export default function HowItWorksSection() {
 
   return (
     <section
+      id="how-it-works"
       ref={sectionRef}
       className="w-full py-20 px-6 lg:px-12 bg-white overflow-hidden"
     >
@@ -170,7 +97,7 @@ export default function HowItWorksSection() {
           </span>
         </h2>
         <p className="hiw-sub mt-4 text-gray-500 text-sm">
-          <strong>Get Started in 3 Simple Steps</strong>—no technical expertise
+          <strong>Get Your School Running in 3 Simple Steps</strong>—no technical expertise
           required
         </p>
       </div>
@@ -227,7 +154,7 @@ export default function HowItWorksSection() {
                 >
                   <path
                     d={
-                      index === 0
+                      index % 2 === 0
                         ? "M 650 10 Q 500 60 400 80 Q 300 100 150 90"
                         : "M 150 10 Q 300 60 400 80 Q 500 100 650 90"
                     }
@@ -245,10 +172,14 @@ export default function HowItWorksSection() {
 
       {/* CTA */}
       <div className="hiw-cta text-center mt-16 flex flex-col items-center gap-4">
-        <p className="text-gray-400 text-sm">Ready to See It Live?</p>
-        <button className="bg-primary hover:bg-primary-dark text-white font-semibold px-10 py-3.5 rounded-full transition-colors text-sm">
-          Start For Free Today
-        </button>
+        <p className="text-gray-400 text-sm">Want to explore all 36 modules?</p>
+        <Link
+          href="/how-it-works"
+          className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-10 py-3.5 rounded-full transition-colors text-sm"
+        >
+          View All Features
+          <ArrowRight size={16} />
+        </Link>
       </div>
     </section>
   );

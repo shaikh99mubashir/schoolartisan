@@ -12,37 +12,37 @@ import "swiper/css";
 const testimonials = [
   {
     quote:
-      "Smart Media completely changed how we manage clients. The agency accounts scaled up fast, and the fact that we can white-label everything is a game changer.",
-    name: "Rania Al-Hassan",
-    role: "Agency Owner, Pixels & Co.",
+      "School Artisan completely transformed how we run our institution. Managing 1,200+ students used to be a nightmare—now everything from admissions to fee collection is smooth and paperless.",
+    name: "Muhammad Tariq",
+    role: "Principal, Al-Noor Academy",
     bgColor: "from-blue-100 to-blue-50",
   },
   {
     quote:
-      "\"We Saw A 35% Lift In Conversions After Switching To Smart Media. The Landing Page Builder Is Intuitive, And The Omnichannel Ad Management Helped Us Reach New Audiences Across TikTok And Snapchat In Days—Not Weeks.\"",
-    name: "Aisha El-Baz",
-    role: "Brand Manager, Lumora Skincare",
+      "The attendance tracking and parent notification system is a game changer. Parents now get instant alerts if their child is absent, and our attendance rate has improved by 18% since we started using School Artisan.",
+    name: "Sana Rehman",
+    role: "Vice Principal, Beacon House School",
     bgColor: "from-blue-100 to-blue-200",
   },
   {
     quote:
-      "\"I Used To Juggle Three Dashboards Just To Manage One Campaign. Now I Run Everything From One Place. I Just Set My Budget, And The Smart Media Team Handles The Rest. My Campaigns Are Scaling Faster, And I Can Finally Focus On The Creative Side.\"",
-    name: "Daniel Kim",
-    role: "Performance Marketer",
+      "I used to spend hours compiling exam results and printing report cards manually. Now the system does it automatically. The exam management module alone has saved our staff countless hours every term.",
+    name: "Asif Mahmood",
+    role: "Head of Academics, City Grammar School",
     bgColor: "from-blue-50 to-blue-100",
   },
   {
     quote:
-      "\"The brand-safe deals alone saved us from two potential PR nightmares. Smart Media's vetting process is thorough, and the onboarding took less than a day. Highly recommend for any serious digital team.\"",
-    name: "Sara Mansoor",
-    role: "Head of Digital, RetailX",
+      "Our fee collection used to be chaotic with lots of missing receipts and unpaid dues. School Artisan's fee management module keeps everything organized—pending fees, overdue notices, and payment history are all at my fingertips.",
+    name: "Amina Siddiqui",
+    role: "Accounts Officer, Roots International",
     bgColor: "from-blue-100 to-blue-50",
   },
   {
     quote:
-      "\"We scaled our TikTok spend from $5K to $50K per month without a single account ban. The agency account infrastructure is rock solid and the support team is always responsive.\"",
-    name: "Omar Farouk",
-    role: "Media Buyer, GrowthLab",
+      "The parent portal is truly outstanding. Parents love being able to check their child's homework, timetable, and attendance from their phone. It has reduced calls to the front office by over 60%.",
+    name: "Khalid Mehmood",
+    role: "IT Coordinator, The Educators",
     bgColor: "from-blue-100 to-blue-200",
   },
 ];
@@ -114,7 +114,7 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full py-20 px-6 lg:px-12 bg-white overflow-hidden">
+    <section id="testimonials" ref={sectionRef} className="w-full py-20 px-6 lg:px-12 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Top Row */}
         <div className="flex items-start justify-between mb-12">
@@ -131,16 +131,16 @@ export default function TestimonialsSection() {
               ))}
               <br />
               <span className="testi-word text-primary inline-block" style={{ marginRight: "0.25em" }}>
-                Successful
+                School
               </span>{" "}
-              <span className="testi-word text-secondary inline-block">Clients</span>
+              <span className="testi-word text-secondary inline-block">Administrators</span>
             </h2>
             <p className="testi-sub mt-4 text-gray-500 text-sm max-w-sm leading-relaxed">
               See{" "}
               <span className="text-gray-700">
-                why agencies, solo marketers, and brands choose{" "}
+                why schools, colleges, and coaching centers trust{" "}
               </span>
-              <strong>Smart Media</strong> to supercharge their ad performance.
+              <strong>School Artisan</strong> to manage their daily operations.
             </p>
           </div>
 

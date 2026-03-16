@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
-import { Bot, ShieldCheck, LayoutTemplate, Globe } from "lucide-react";
+import { Users, ShieldCheck, Globe, Smartphone } from "lucide-react";
 
 export default function PlatformSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -64,41 +64,41 @@ export default function PlatformSection() {
 
   const features = [
     {
-      title: "Agency-Level Ad Accounts:",
+      title: "Multi-Role Access",
       description:
-        "Launch campaigns without the hassle of managing your own accounts.",
+        "Separate, secure portals for Admins, Teachers, Students, Parents, Accountants, and Librarians.",
       bg: "from-blue-50 to-blue-100",
       iconColor: "text-primary",
-      icon: (<Bot size={64} strokeWidth={1} />),
+      icon: (<Users size={64} strokeWidth={1} />),
     },
     {
-      title: "Curated Brand-Safe Deals",
+      title: "Secure & Reliable",
       description:
-        "Tap into premium publisher inventory vetted for brand safety and performance.",
+        "Role-based permissions, automated database backups, and enterprise-grade data security for your school.",
       bg: "from-blue-100 to-blue-200",
       iconColor: "text-blue-400",
       icon: (<ShieldCheck size={64} strokeWidth={1} />),
     },
     {
-      title: "Custom Landing Pages:",
+      title: "School Front Website",
       description:
-        "Build link-in-bio pages, add QR CTAs, embed WhatsApp & forms—no coding required.",
+        "A built-in public-facing school website for sharing news, announcements, and general information.",
       bg: "from-blue-100 via-blue-50 to-blue-200",
       iconColor: "text-primary",
-      icon: (<LayoutTemplate size={64} strokeWidth={1} />),
+      icon: (<Globe size={64} strokeWidth={1} />),
     },
     {
-      title: "Retail Media Platform",
+      title: "Mobile App Ready",
       description:
-        "Manage self-service & white-label campaigns for retailers, marketplaces, and grocers in one place.",
+        "Students and parents can access timetables, homework, attendance, and exam results from their phones.",
       bg: "from-blue-50 via-blue-100 to-blue-200",
       iconColor: "text-blue-500",
-      icon: (<Globe size={64} strokeWidth={1} />),
+      icon: (<Smartphone size={64} strokeWidth={1} />),
     },
   ];
 
   return (
-    <section ref={sectionRef} className="w-full py-16 px-6 lg:px-12 bg-white">
+    <section id="modules" ref={sectionRef} className="w-full py-16 px-6 lg:px-12 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Left */}
         <div className="flex flex-col gap-6">
@@ -107,7 +107,7 @@ export default function PlatformSection() {
               <span className="platform-word text-primary inline-block">All-in-One</span>{" "}
               <span className="platform-word text-secondary inline-block">Platform</span>
               <br />
-              {["For", "Smarter", "Campaigns"].map((word, i) => (
+              {["For", "Smarter", "Schools"].map((word, i) => (
                 <span
                   key={i}
                   className="platform-word text-gray-900 inline-block"
@@ -120,8 +120,8 @@ export default function PlatformSection() {
           </div>
 
           <p className="platform-fade text-gray-600 text-sm leading-relaxed max-w-sm">
-            Smart Media Marketing is{" "}
-            <strong>designed to empower digital marketers and agencies</strong>{" "}
+            School Artisan is{" "}
+            <strong>designed to empower school administrators, teachers, and parents</strong>{" "}
             by providing:
           </p>
 
@@ -149,31 +149,31 @@ export default function PlatformSection() {
                 </div>
                 {[
                   "Dashboard",
-                  "Campaigns",
-                  "Landing Pages",
-                  "Projects",
-                  "Billing",
-                  "Proposals",
-                  "Contracts",
-                  "Users",
-                  "Support",
-                  "Knowledgebase",
+                  "Students",
+                  "Attendance",
+                  "Examinations",
+                  "Fee Management",
+                  "E-Learning",
+                  "Library",
+                  "Transport",
+                  "Staff",
+                  "Reports",
                 ].map((item) => (
                   <div
                     key={item}
                     className={`flex items-center gap-1.5 px-2 py-1 rounded text-[9px] ${
-                      item === "Campaigns"
+                      item === "Students"
                         ? "bg-blue-50 text-blue-600 font-semibold"
                         : "text-gray-500"
                     }`}
                   >
                     <div
                       className={`w-2.5 h-2.5 rounded-sm ${
-                        item === "Campaigns" ? "bg-blue-400" : "bg-gray-200"
+                        item === "Students" ? "bg-blue-400" : "bg-gray-200"
                       }`}
                     />
                     {item}
-                    {item === "Billing" && (
+                    {item === "Fee Management" && (
                       <span className="ml-auto text-gray-300">›</span>
                     )}
                   </div>
@@ -185,8 +185,8 @@ export default function PlatformSection() {
                 {/* Header */}
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-blue-500 text-xs font-semibold">TikTok Campaigns</p>
-                    <p className="text-[9px] text-gray-400">APP › TIKTOK CAMPAIGNS</p>
+                    <p className="text-blue-500 text-xs font-semibold">Student Management</p>
+                    <p className="text-[9px] text-gray-400">DASHBOARD › STUDENTS</p>
                   </div>
                   <div className="flex items-center gap-1">
                     <div className="w-5 h-5 rounded-full bg-red-400" />
@@ -194,14 +194,14 @@ export default function PlatformSection() {
                   </div>
                 </div>
 
-                <p className="text-[9px] text-red-500">The highlighted campaigns are drafted campaign</p>
+                <p className="text-[9px] text-green-600">Showing all enrolled students for current session</p>
 
                 {/* Stats Row */}
                 <div className="grid grid-cols-3 gap-2">
                   {[
-                    { label: "Total Campaigns", value: "3" },
-                    { label: "Budget", value: "$210.00" },
-                    { label: "Spent", value: "$3,340.45" },
+                    { label: "Total Students", value: "1,240" },
+                    { label: "Present Today", value: "1,196" },
+                    { label: "Fee Collected", value: "₨2.4L" },
                   ].map((stat) => (
                     <div key={stat.label}>
                       <p className="text-xs font-semibold text-gray-800">{stat.value}</p>
@@ -214,14 +214,14 @@ export default function PlatformSection() {
                 {/* Table */}
                 <div className="bg-white rounded-lg overflow-hidden border border-gray-100">
                   <div className="grid grid-cols-5 px-2 py-1 border-b border-gray-100">
-                    {["Title", "Type", "Budget", "Spent", "Conv. Result"].map((h) => (
+                    {["Name", "Class", "Roll No.", "Attendance", "Fee Status"].map((h) => (
                       <p key={h} className="text-[8px] text-blue-400 font-medium">{h}</p>
                     ))}
                   </div>
                   {[
-                    ["Sami test campaign", "Traffic", "$50.00", "$0.00", "0"],
-                    ["احمد الكرخي", "Web Conversions", "$0.00", "$3,340.45", "84.15K"],
-                    ["Sami Test 2", "Web Conversions", "$160.00", "$0.00", "0"],
+                    ["Ahmed Raza", "Class X-A", "0023", "96%", "Paid"],
+                    ["Sara Malik", "Class IX-B", "0041", "88%", "Pending"],
+                    ["Usman Ali", "Class X-A", "0024", "100%", "Paid"],
                   ].map((row, i) => (
                     <div key={i} className="grid grid-cols-5 px-2 py-1.5 border-b border-gray-50">
                       {row.map((cell, j) => (

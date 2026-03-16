@@ -9,29 +9,29 @@ import {
 
 const faqs = [
   {
-    question: "What is Smart Media Marketing?",
+    question: "What is School Artisan?",
     answer:
-      "Smart Media is a performance marketing platform that offers agency-level ad accounts, curated media deals, landing page tools, and omnichannel ad campaign management—all in one place.",
+      "School Artisan is a complete school management system designed for K-12 schools, colleges, and coaching centers. It covers student management, attendance, exams, fee collection, e-learning, library, transport, and much more—all in one beautifully designed platform.",
   },
   {
-    question: "Who is this platform for?",
+    question: "Who is School Artisan suitable for?",
     answer:
-      "Smart Media is built for digital marketers, media buyers, marketing agencies, and brands of all sizes who want to scale their advertising without the headaches of managing multiple ad accounts.",
+      "School Artisan is built for all types of educational institutions—primary schools, high schools, colleges, universities, coaching centers, and training institutes. It supports multiple user roles including Admin, Teachers, Students, Parents, Accountants, and Librarians.",
   },
   {
-    question: "Do I need my own ad accounts to run campaigns?",
+    question: "Can I try it before purchasing?",
     answer:
-      "No. Smart Media provides agency-level ad accounts on TikTok, Meta, Snapchat, and more. You simply set your budget and we handle the rest—no bans, no limits.",
+      "Absolutely! We offer a full hands-on demo with sample data so you can explore every feature—including the student portal, parent app, admin dashboard, and more—before making any commitment.",
   },
   {
-    question: "Is there a free trial or free access?",
+    question: "What modules are included in School Artisan?",
     answer:
-      "Yes! You can sign up for free with no upfront costs. You only pay your ad budget plus our 10% management fee when you launch campaigns.",
+      "School Artisan includes 29+ modules: Student Management, Attendance, Examinations, Fee Management, E-Learning (Homework, Online Exams, Live Classes), Library Management, Transport, Hostel, Timetable, SMS Notifications, and more.",
   },
   {
-    question: "What about contracts, proposals, and billing?",
+    question: "Is training and technical support available?",
     answer:
-      "Smart Media includes built-in tools for creating proposals, managing contracts, sending invoices, and tracking billing—all from your unified dashboard.",
+      "Yes. We provide detailed documentation, video tutorials, and a dedicated support team to help you set up and get the most out of School Artisan. Ongoing updates and new features are included at no extra cost.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function FAQSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full py-20 px-6 lg:px-12 bg-white">
+    <section id="faqs" ref={sectionRef} className="w-full py-20 px-6 lg:px-12 bg-white">
       <div className="max-w-3xl mx-auto">
         <h2
           className="faq-heading text-4xl lg:text-5xl font-medium text-center mb-14"
