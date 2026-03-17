@@ -35,7 +35,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full">
+    <header className="w-full relative">
       <div className="w-full max-w-400 mx-auto px-6 py-4 flex items-center justify-between bg-white">
         {/* Logo */}
         <div className="flex items-center gap-2">

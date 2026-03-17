@@ -205,10 +205,10 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="px-5">
+    <section className="px-3 sm:px-5 overflow-hidden">
       <section
         ref={sectionRef}
-        className="relative w-full min-h-[88vh] border border-gray-200 rounded-4xl flex items-center overflow-hidden bg-gray-50"
+        className="relative w-full min-h-[88vh] border border-gray-200 rounded-3xl flex items-center overflow-hidden bg-gray-50"
         style={{
           backgroundImage:
             "radial-gradient(circle, #c4c4c4 1px, transparent 1px)",
@@ -218,7 +218,7 @@ export default function HeroSection() {
         <div className="max-w-400 mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center py-16">
           {/* Left Content */}
           <div className="flex flex-col gap-6 z-10">
-            <h1 className="text-5xl lg:text-6xl font-medium leading-tight tracking-tight text-gray-900">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-medium leading-tight tracking-tight text-gray-900">
               {[
                 "Run",
                 "Your",
@@ -267,9 +267,9 @@ export default function HeroSection() {
           </div>
 
           {/* Right - Schoolly Phone Mockup */}
-          <div className="hero-phone max-w-100 mx-auto w-full relative flex justify-center items-center z-10">
+          <div className="hero-phone max-w-xs sm:max-w-sm lg:max-w-100 mx-auto w-full relative flex justify-center items-center z-10">
             {/* Floating Students Card */}
-            <div className="hero-card absolute -left-2 top-1/4 bg-white rounded-2xl shadow-lg px-3 py-2.5 flex items-center gap-2.5 z-20 border border-gray-100">
+            <div className="hero-card hidden sm:flex absolute -left-2 top-1/4 bg-white rounded-2xl shadow-lg px-3 py-2.5 items-center gap-2.5 z-20 border border-gray-100">
               <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
                 <Users size={16} color="#3b82f6" />
               </div>
@@ -283,7 +283,7 @@ export default function HeroSection() {
             <SchoollyPhoneMockup />
 
             {/* Floating Attendance Card */}
-            <div className="hero-card absolute -right-2 top-1/3 bg-white rounded-2xl shadow-lg px-3 py-2.5 flex items-center gap-2.5 z-20 border border-gray-100">
+            <div className="hero-card hidden sm:flex absolute -right-2 top-1/3 bg-white rounded-2xl shadow-lg px-3 py-2.5 items-center gap-2.5 z-20 border border-gray-100">
               <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
                 <Check size={16} color="#22c55e" />
               </div>

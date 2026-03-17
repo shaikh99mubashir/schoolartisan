@@ -73,7 +73,7 @@ export default function FAQSection() {
     <section id="faqs" ref={sectionRef} className="w-full py-20 px-6 lg:px-12 bg-white">
       <div className="max-w-3xl mx-auto">
         <h2
-          className="faq-heading text-4xl lg:text-5xl font-medium text-center mb-14"
+          className="faq-heading text-3xl lg:text-5xl font-medium text-center mb-10 lg:mb-14"
           style={{
             background: "var(--brand-gradient)",
             WebkitBackgroundClip: "text",

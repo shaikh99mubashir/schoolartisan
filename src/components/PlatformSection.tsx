@@ -99,7 +99,7 @@ export default function PlatformSection() {
 
   return (
     <section id="modules" ref={sectionRef} className="w-full py-16 px-6 lg:px-12 bg-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
         {/* Left */}
         <div className="flex flex-col gap-6">
           <div>
@@ -126,7 +126,7 @@ export default function PlatformSection() {
           </p>
 
           {/* Dashboard Mockup */}
-          <div className="platform-dashboard relative mt-4 rounded-2xl overflow-hidden shadow-xl border border-gray-200 bg-white">
+          <div className="platform-dashboard hidden sm:block relative mt-4 rounded-2xl overflow-hidden shadow-xl border border-gray-200 bg-white">
             {/* Tablet top bar */}
             <div className="bg-gray-900 h-8 flex items-center justify-center rounded-t-2xl">
               <div className="w-20 h-3 bg-gray-700 rounded-full" />
@@ -249,7 +249,7 @@ export default function PlatformSection() {
               key={feature.title}
               className={`platform-card relative bg-linear-to-br ${feature.bg} rounded-2xl p-6 flex items-start justify-between gap-4 overflow-hidden`}
             >
-              <div className="flex flex-col gap-3 max-w-[55%]">
+              <div className="flex flex-col gap-3 max-w-full lg:max-w-[55%]">
                 <h3 className="text-lg font-semibold text-gray-900 leading-snug">
                   {feature.title}
                 </h3>

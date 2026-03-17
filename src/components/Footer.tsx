@@ -71,14 +71,14 @@ export default function Footer() {
   return (
     <footer ref={footerRef} className="w-full px-6 lg:px-12 py-6 bg-white">
       <div
-        className="max-w-7xl mx-auto rounded-3xl border border-gray-200 p-10 lg:p-14 relative"
+        className="max-w-7xl mx-auto rounded-3xl border border-gray-200 p-6 sm:p-8 lg:p-14 relative"
         style={{
           backgroundImage: "radial-gradient(circle, #d4d4d4 1px, transparent 1px)",
           backgroundSize: "24px 24px",
           backgroundColor: "#fafafa",
         }}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Left: Headline */}
           <div className="lg:col-span-1 flex flex-col justify-between">
             <h2 className="text-3xl lg:text-4xl font-medium leading-tight text-gray-900">
@@ -136,7 +136,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="footer-bottom mt-14 flex items-center justify-between border-t border-gray-200 pt-6">
+        <div className="footer-bottom mt-10 lg:mt-14 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-gray-200 pt-6">
           <p className="text-xs text-gray-400">
             © 2025 School Artisan. All rights reserved.
           </p>

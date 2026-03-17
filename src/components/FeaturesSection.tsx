@@ -271,12 +271,12 @@ export default function FeaturesSection() {
       </div>
 
       {/* Cards Grid */}
-      <div className="features-grid max-w-8xl mx-auto bg-gray-50 rounded-3xl border border-gray-100 p-10">
+      <div className="features-grid max-w-8xl mx-auto bg-gray-50 rounded-3xl border border-gray-100 p-6 lg:p-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
           {features.map((feature) => (
             <div key={feature.title} className="features-card flex flex-col gap-4">
               <feature.icon size={40} strokeWidth={1.5} className="text-gray-800" />
-              <h3 className="text-2xl font-medium text-gray-900 leading-snug whitespace-pre-line">
+              <h3 className="text-lg lg:text-2xl font-medium text-gray-900 leading-snug whitespace-pre-line">
                 {feature.title}
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed">

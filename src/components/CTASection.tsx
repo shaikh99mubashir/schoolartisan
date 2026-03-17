@@ -163,7 +163,7 @@ export default function CTASection() {
         backgroundSize: "24px 24px",
       }}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-8">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-6 lg:gap-8">
         {/* Left Phone */}
         <div className="cta-phone hidden lg:block relative shrink-0">
           <MiniPhone />
@@ -171,7 +171,7 @@ export default function CTASection() {
 
         {/* Center Text */}
         <div className="flex flex-col items-center text-center gap-6 flex-1 max-w-lg mx-auto">
-          <h2 className="text-4xl lg:text-5xl font-medium leading-tight">
+          <h2 className="text-3xl lg:text-5xl font-medium leading-tight">
             {["See", "Your", "School", "Transform"].map((word, i) => (
               <span
                 key={i}

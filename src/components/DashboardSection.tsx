@@ -263,8 +263,8 @@ export default function DashboardSection() {
     <section ref={sectionRef} className="bg-black w-full">
       {/* Heading */}
 
-      <div className="text-center pt-20 pb-10 px-6">
-        <h2 className="text-3xl lg:text-4xl font-medium text-white">
+      <div className="text-center pt-10 lg:pt-20 pb-6 lg:pb-10 px-6">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white">
           {["Manage", "Your", "School,"].map((word, i) => (
             <span
               key={i}

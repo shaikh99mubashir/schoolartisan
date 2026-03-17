@@ -117,7 +117,7 @@ export default function TestimonialsSection() {
     <section id="testimonials" ref={sectionRef} className="w-full py-20 px-6 lg:px-12 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Top Row */}
-        <div className="flex items-start justify-between mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-12">
           <div>
             <h2 className="text-4xl lg:text-5xl font-medium leading-tight">
               {["Hear", "from", "Our"].map((word, i) => (
@@ -198,7 +198,7 @@ export default function TestimonialsSection() {
 
                   {/* Right: Image placeholder */}
                   <div
-                    className={`w-44 shrink-0 bg-linear-to-br ${t.bgColor} relative flex items-center justify-center`}
+                    className={`hidden sm:flex w-44 shrink-0 bg-linear-to-br ${t.bgColor} relative items-center justify-center`}
                   >
                     <div className="flex flex-col items-center gap-2 opacity-60">
                       <div

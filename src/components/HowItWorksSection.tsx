@@ -106,7 +106,7 @@ export default function HowItWorksSection() {
       <div className="max-w-6xl mx-auto flex flex-col gap-0">
         {steps.map((step, index) => (
           <div key={step.number} className="relative">
-            <div className="hiw-step grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-10">
+            <div className="hiw-step grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center py-8 lg:py-10">
               {/* Text Side */}
               <div
                 className={`flex flex-col gap-4 ${
@@ -114,7 +114,7 @@ export default function HowItWorksSection() {
                 }`}
               >
                 <div className="flex flex-col gap-2">
-                  <span className="text-6xl font-medium text-gray-200 leading-none select-none">
+                  <span className="text-4xl lg:text-6xl font-medium text-gray-200 leading-none select-none">
                     {step.number}
                   </span>
                   <div className="w-0.5 h-24 bg-blue-300 ml-1" />
@@ -136,7 +136,7 @@ export default function HowItWorksSection() {
                 }`}
               >
                 <div
-                  className={`rounded-3xl bg-linear-to-br ${step.imageBg} h-80 relative overflow-hidden`}
+                  className={`rounded-3xl bg-linear-to-br ${step.imageBg} h-52 sm:h-64 lg:h-80 relative overflow-hidden`}
                 >
                   {step.imageContent}
                 </div>
@@ -145,7 +145,7 @@ export default function HowItWorksSection() {
 
             {/* Dashed Curved Connector */}
             {index < steps.length - 1 && (
-              <div className="relative h-20 w-full -mt-4 -mb-4">
+              <div className="relative h-20 w-full -mt-4 -mb-4 hidden lg:block">
                 <svg
                   viewBox="0 0 800 100"
                   className="w-full h-full"
@@ -171,7 +171,7 @@ export default function HowItWorksSection() {
       </div>
 
       {/* CTA */}
-      <div className="hiw-cta text-center mt-16 flex flex-col items-center gap-4">
+      <div className="hiw-cta text-center mt-10 lg:mt-16 flex flex-col items-center gap-4">
         <p className="text-gray-400 text-sm">Want to explore all 36 modules?</p>
         <Link
           href="/how-it-works"
