@@ -196,9 +196,12 @@ export default function CTASection() {
             </strong>
             —with zero technical expertise required.
           </p>
-          <button className="cta-content bg-primary hover:bg-primary-dark text-white font-semibold px-10 py-3.5 rounded-full transition-colors text-sm">
+          <a
+            href="/contact"
+            className="cta-content bg-primary hover:bg-primary-dark text-white font-semibold px-10 py-3.5 rounded-full transition-colors text-sm inline-flex items-center justify-center"
+          >
             Request a Free Demo
-          </button>
+          </a>
         </div>
 
         {/* Right Dashboard */}

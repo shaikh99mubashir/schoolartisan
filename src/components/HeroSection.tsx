@@ -253,10 +253,16 @@ export default function HeroSection() {
             </div>
 
             <div className="flex items-center gap-4 flex-wrap">
-              <button className="hero-btn bg-primary hover:bg-primary-dark text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm">
+              <a
+                href="/contact"
+                className="hero-btn bg-primary hover:bg-primary-dark text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm inline-flex items-center justify-center"
+              >
                 Request Free Demo
-              </button>
-              <button className="hero-btn border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm">
+              </a>
+              <button
+                onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
+                className="hero-btn border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-7 py-3 rounded-full transition-colors text-sm"
+              >
                 View Features
               </button>
             </div>

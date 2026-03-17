@@ -9,7 +9,7 @@ const navLinks = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "FAQs", href: "#faqs" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -19,9 +19,17 @@ export default function Header() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
 
-    // If not on homepage, navigate there first with hash
+    // Full page links (e.g. /contact) — navigate directly
+    if (!href.startsWith("#")) {
+      router.push(href);
+      setMenuOpen(false);
+      return;
+    }
+
+    // Hash links — scroll to section
     if (router.pathname !== "/") {
       router.push("/" + href);
+      setMenuOpen(false);
       return;
     }
 
@@ -58,9 +66,12 @@ export default function Header() {
 
         {/* Right Actions */}
         <div className="hidden md:flex items-center gap-3">
-          <button className="bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors">
+          <a
+            href="/contact"
+            className="bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
+          >
             Request Free Demo
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -84,9 +95,12 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <button className="bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-full w-full">
+            <a
+              href="/contact"
+              className="bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-full w-full text-center"
+            >
               Request Free Demo
-            </button>
+            </a>
           </div>
         )}
       </div>
