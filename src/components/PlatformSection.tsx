@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
-import { School, ShieldCheck, LayoutTemplate, Globe } from "lucide-react";
+import { Users, ShieldCheck, Globe, Smartphone } from "lucide-react";
 
 export default function PlatformSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -64,41 +64,41 @@ export default function PlatformSection() {
 
   const features = [
     {
-      title: "Centralized School Dashboard",
+      title: "Multi-Role Access",
       description:
-        "Principal ke liye ek hi screen par students, staff, fees, attendance aur exams ka live overview.",
+        "Separate, secure portals for Admins, Teachers, Students, Parents, Accountants, and Librarians.",
       bg: "from-blue-50 to-blue-100",
       iconColor: "text-primary",
-      icon: (<School size={64} strokeWidth={1} />),
+      icon: (<Users size={64} strokeWidth={1} />),
     },
     {
-      title: "Secure Cloud & Role-Based Access",
+      title: "Secure & Reliable",
       description:
-        "Data secure cloud par store hota hai, har user (admin, teacher, parent, accountant) ke liye alag permissions.",
+        "Role-based permissions, automated database backups, and enterprise-grade data security for your school.",
       bg: "from-blue-100 to-blue-200",
       iconColor: "text-blue-400",
       icon: (<ShieldCheck size={64} strokeWidth={1} />),
     },
     {
-      title: "Dynamic School Website CMS",
+      title: "School Front Website",
       description:
-        "Pages, news, events, gallery, admission forms aur blogs ko bina coding ke manage karein.",
+        "A built-in public-facing school website for sharing news, announcements, and general information.",
       bg: "from-blue-100 via-blue-50 to-blue-200",
       iconColor: "text-primary",
-      icon: (<LayoutTemplate size={64} strokeWidth={1} />),
+      icon: (<Globe size={64} strokeWidth={1} />),
     },
     {
-      title: "Multi-Branch & Multi-Campus Ready",
+      title: "Mobile App Ready",
       description:
-        "Ek hi ERP se multiple branches/schools manage karein—har campus ke liye separate reports aur website sections.",
+        "Students and parents can access timetables, homework, attendance, and exam results from their phones.",
       bg: "from-blue-50 via-blue-100 to-blue-200",
       iconColor: "text-blue-500",
-      icon: (<Globe size={64} strokeWidth={1} />),
+      icon: (<Smartphone size={64} strokeWidth={1} />),
     },
   ];
 
   return (
-    <section id="school-erp" ref={sectionRef} className="w-full py-16 px-6 lg:px-12 bg-white">
+    <section id="modules" ref={sectionRef} className="w-full py-16 px-6 lg:px-12 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Left */}
         <div className="flex flex-col gap-6">
@@ -107,7 +107,7 @@ export default function PlatformSection() {
               <span className="platform-word text-primary inline-block">All-in-One</span>{" "}
               <span className="platform-word text-secondary inline-block">School Platform</span>
               <br />
-              {["For", "Smarter", "Management"].map((word, i) => (
+              {["For", "Smarter", "Schools"].map((word, i) => (
                 <span
                   key={i}
                   className="platform-word text-gray-900 inline-block"
@@ -121,9 +121,8 @@ export default function PlatformSection() {
 
           <p className="platform-fade text-gray-600 text-sm leading-relaxed max-w-sm">
             School Artisan is{" "}
-            <strong>designed for school owners, principals, coordinators and admin staff</strong>
-            —so they can replace manual registers, scattered Excel sheets and WhatsApp groups
-            with one organized, cloud-based system.
+            <strong>designed to empower school administrators, teachers, and parents</strong>{" "}
+            by providing:
           </p>
 
           {/* Dashboard Mockup */}
@@ -152,29 +151,29 @@ export default function PlatformSection() {
                   "Dashboard",
                   "Students",
                   "Attendance",
-                  "Fees",
-                  "Exams",
-                  "Homework",
+                  "Examinations",
+                  "Fee Management",
+                  "E-Learning",
+                  "Library",
+                  "Transport",
                   "Staff",
-                  "Classes",
-                  "Communication",
-                  "Settings",
+                  "Reports",
                 ].map((item) => (
                   <div
                     key={item}
                     className={`flex items-center gap-1.5 px-2 py-1 rounded text-[9px] ${
-                      item === "Dashboard"
+                      item === "Students"
                         ? "bg-blue-50 text-blue-600 font-semibold"
                         : "text-gray-500"
                     }`}
                   >
                     <div
                       className={`w-2.5 h-2.5 rounded-sm ${
-                        item === "Dashboard" ? "bg-blue-400" : "bg-gray-200"
+                        item === "Students" ? "bg-blue-400" : "bg-gray-200"
                       }`}
                     />
                     {item}
-                    {item === "Fees" && (
+                    {item === "Fee Management" && (
                       <span className="ml-auto text-gray-300">›</span>
                     )}
                   </div>
@@ -186,8 +185,8 @@ export default function PlatformSection() {
                 {/* Header */}
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-blue-500 text-xs font-semibold">School Overview</p>
-                    <p className="text-[9px] text-gray-400">DASHBOARD › TODAY&apos;S SUMMARY</p>
+                    <p className="text-blue-500 text-xs font-semibold">Student Management</p>
+                    <p className="text-[9px] text-gray-400">DASHBOARD › STUDENTS</p>
                   </div>
                   <div className="flex items-center gap-1">
                     <div className="w-5 h-5 rounded-full bg-green-400" />
@@ -195,16 +194,14 @@ export default function PlatformSection() {
                   </div>
                 </div>
 
-                <p className="text-[9px] text-green-600">
-                  Attendance updated · Fee collection and exam status live synced
-                </p>
+                <p className="text-[9px] text-green-600">Showing all enrolled students for current session</p>
 
                 {/* Stats Row */}
                 <div className="grid grid-cols-3 gap-2">
                   {[
                     { label: "Total Students", value: "1,240" },
-                    { label: "Today Present", value: "1,195" },
-                    { label: "Fee Pending", value: "Rs. 145,000" },
+                    { label: "Present Today", value: "1,196" },
+                    { label: "Fee Collected", value: "₨2.4L" },
                   ].map((stat) => (
                     <div key={stat.label}>
                       <p className="text-xs font-semibold text-gray-800">{stat.value}</p>
@@ -217,16 +214,14 @@ export default function PlatformSection() {
                 {/* Table */}
                 <div className="bg-white rounded-lg overflow-hidden border border-gray-100">
                   <div className="grid grid-cols-5 px-2 py-1 border-b border-gray-100">
-                    {["Class", "Present", "Absent", "Fee Paid", "Exam Status"].map((h) => (
-                      <p key={h} className="text-[8px] text-blue-400 font-medium">
-                        {h}
-                      </p>
+                    {["Name", "Class", "Roll No.", "Attendance", "Fee Status"].map((h) => (
+                      <p key={h} className="text-[8px] text-blue-400 font-medium">{h}</p>
                     ))}
                   </div>
                   {[
-                    ["Nursery A", "28", "2", "85%", "Ongoing"],
-                    ["Class 5-B", "32", "1", "91%", "Completed"],
-                    ["Class 10-A", "35", "0", "78%", "Preparing"],
+                    ["Ahmed Raza", "Class X-A", "0023", "96%", "Paid"],
+                    ["Sara Malik", "Class IX-B", "0041", "88%", "Pending"],
+                    ["Usman Ali", "Class X-A", "0024", "100%", "Paid"],
                   ].map((row, i) => (
                     <div key={i} className="grid grid-cols-5 px-2 py-1.5 border-b border-gray-50">
                       {row.map((cell, j) => (

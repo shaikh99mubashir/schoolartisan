@@ -20,24 +20,27 @@ const MockupCard = ({
         <div className="w-5 h-5 bg-teal-100 rounded-full" />
       </div>
     </div>
-    {children}
+    <div className="h-100">
+      {children}
+    </div>
   </div>
 );
 
 const InvoicesCard = () => (
   <MockupCard>
     <div className="p-3 text-[9px]">
+      <p className="text-[10px] font-semibold text-gray-700 mb-2">Fee Receipts</p>
       <div className="grid grid-cols-3 gap-2 text-blue-500 font-semibold border-b border-gray-100 pb-1 mb-2">
-        <span>Receipt No. ↕</span><span>Date ↕</span><span>Amount ↕</span>
+        <span>Receipt ↕</span><span>Student ↕</span><span>Amount ↕</span>
       </div>
       {[
-        ["FEE-000421", "18-12-2024", "Rs. 12,000"],
-        ["FEE-000389", "21-10-2024", "Rs. 8,500"],
-        ["FEE-000377", "21-10-2024", "Rs. 9,000"],
+        ["FEE-0053", "Ahmed Raza", "₨5,500"],
+        ["FEE-0052", "Sara Malik", "₨5,500"],
+        ["FEE-0051", "Usman Ali", "₨5,500"],
       ].map((r, i) => (
         <div key={i} className="grid grid-cols-3 gap-2 py-1 border-b border-gray-50">
           <span className="text-blue-400 truncate">{r[0]}</span>
-          <span className="text-gray-500">{r[1]}</span>
+          <span className="text-gray-500 truncate">{r[1]}</span>
           <span className="text-gray-500">{r[2]}</span>
         </div>
       ))}
@@ -48,11 +51,11 @@ const InvoicesCard = () => (
 const ActivityCard = () => (
   <MockupCard>
     <div className="p-3">
-      <p className="text-[9px] font-semibold text-gray-700 mb-2">Latest Activity</p>
+      <p className="text-[9px] font-semibold text-gray-700 mb-2">Recent Activity</p>
       {[
-        { label: "Attendance", sub: "Class 5-B marked present (32/33)", tag: "Synced", time: "10 min ago" },
-        { label: "Fees", sub: "Monthly fee collected for 18 students", tag: "Posted", time: "1 hour ago" },
-        { label: "Exams", sub: "Mid Term result published for Class 8-A", tag: null, time: "Yesterday" },
+        { label: "Attendance", sub: "Class X-A marked present (48/50)", tag: "Completed", time: "Today" },
+        { label: "Exam", sub: "Mathematics result uploaded", tag: "Published", time: "Yesterday" },
+        { label: "Fee", sub: "Sara Malik fee payment received", tag: null, time: "2 days ago" },
       ].map((a, i) => (
         <div key={i} className="flex gap-2 mb-2">
           <div className="w-5 h-5 rounded-full bg-gray-200 shrink-0 mt-0.5 flex items-center justify-center">
@@ -81,7 +84,7 @@ const StatsCard = () => (
       {[
         { value: "1,240", label: "Total Students", bar: "bg-teal-400", iconBg: "bg-teal-100", dot: "bg-teal-400" },
         { value: "96.4%", label: "Avg. Attendance", bar: "bg-orange-400", iconBg: "bg-orange-100", dot: "bg-orange-400" },
-        { value: "Rs. 4.2M", label: "Fee Collected", bar: "bg-red-400", iconBg: "bg-red-100", dot: "bg-red-400" },
+        { value: "₨2.4L", label: "Fee Collected", bar: "bg-blue-400", iconBg: "bg-blue-100", dot: "bg-blue-400" },
       ].map((s, i) => (
         <div key={i} className="flex items-center justify-between">
           <div>
@@ -101,13 +104,14 @@ const StatsCard = () => (
 const CustomersCard = () => (
   <MockupCard>
     <div className="p-3 text-[9px]">
+      <p className="text-[10px] font-semibold text-gray-700 mb-2">Students</p>
       <div className="grid grid-cols-2 gap-2 text-blue-500 font-semibold border-b border-gray-100 pb-1 mb-2">
         <span>Name ↕</span><span>Class ↕</span>
       </div>
       {[
-        ["Ali Raza ★", "Class 5-B"],
-        ["Ayesha Noor", "Class 8-A"],
-        ["Hamza Khan", "Class 10-A"],
+        ["Ahmed Raza", "Class X-A"],
+        ["Sara Malik", "Class IX-B"],
+        ["Usman Ali", "Class X-A"],
       ].map((r, i) => (
         <div key={i} className="grid grid-cols-2 gap-2 py-1.5 border-b border-gray-50 items-center">
           <div className="flex items-center gap-1">
@@ -124,15 +128,15 @@ const CustomersCard = () => (
 const UserFormCard = () => (
   <MockupCard>
     <div className="p-3 text-[9px]">
-      <p className="text-[10px] font-semibold text-gray-700 mb-2">Add New Student</p>
-      {["First Name*", "Last Name*", "Email Address*"].map((f) => (
+      <p className="text-[10px] font-semibold text-gray-700 mb-2">Admit New Student</p>
+      {["Full Name*", "Father's Name*", "Date of Birth*"].map((f) => (
         <div key={f} className="mb-1.5">
           <p className="text-gray-500 mb-0.5">{f}</p>
           <div className="h-4 bg-gray-100 rounded border border-gray-200 w-full" />
         </div>
       ))}
       <div className="mb-1.5">
-        <p className="text-gray-500 mb-0.5">Telephone</p>
+        <p className="text-gray-500 mb-0.5">Contact Number</p>
         <div className="h-4 bg-gray-100 rounded border border-gray-200 w-full flex items-center px-1">
           <span className="text-[8px] text-gray-400">🇵🇰 +92 • 301 2345678</span>
         </div>
@@ -142,9 +146,9 @@ const UserFormCard = () => (
 );
 
 const PhoneMockup = () => (
-  <div className="relative w-56 h-[480px] bg-white rounded-[2.5rem] border-4 border-primary shadow-2xl overflow-hidden shrink-0">
+  <div className="relative w-56 h-120 bg-white rounded-[2.5rem] border-4 border-primary shadow-2xl overflow-hidden shrink-0">
     <div className="absolute top-3 left-1/2 -translate-x-1/2 w-20 h-4 bg-gray-900 rounded-full z-10" />
-    <div className="absolute inset-0 bg-white overflow-y-auto pt-10 px-3 pb-3">
+    <div className="absolute inset-0 bg-white overflow-hidden pt-10 px-3 pb-3">
       <div className="flex items-center justify-between mb-3">
         <div className="w-4 h-4 bg-gray-300 rounded" />
         <div className="flex items-center gap-2">
@@ -155,39 +159,45 @@ const PhoneMockup = () => (
           <div className="w-5 h-5 bg-teal-100 rounded-full" />
         </div>
       </div>
-      <h3 className="text-sm font-semibold text-gray-900 mb-1">Class Summary</h3>
-      <p className="text-[9px] text-gray-600 mb-3">Class 5-B · Section Blue · Class Teacher: Ms. Ayesha</p>
+      <h3 className="text-sm font-semibold text-gray-900 mb-1">Student Profile</h3>
+      <p className="text-[9px] text-gray-600 mb-3">Ahmed Raza · Class X-A · Roll No. 0023</p>
       <div className="border border-blue-400 rounded-lg p-2 mb-2 bg-blue-50">
         <div className="flex items-center gap-1.5 mb-0.5">
           <div className="w-3 h-3 rounded-full bg-blue-500 border-2 border-white ring-1 ring-blue-500" />
-          <p className="text-[10px] font-semibold text-gray-800">Today&apos;s Attendance</p>
+          <p className="text-[10px] font-semibold text-gray-800">Attendance: 96%</p>
         </div>
-        <p className="text-[8px] text-gray-500 ml-4">Present: 32 · Absent: 1 · Late: 0</p>
+        <p className="text-[8px] text-gray-500 ml-4">Present 48 out of 50 days</p>
       </div>
       <div className="border border-gray-200 rounded-lg p-2 mb-2 bg-white">
         <div className="flex items-center gap-1.5 mb-0.5">
           <div className="w-3 h-3 rounded-full border border-gray-300" />
-          <p className="text-[10px] font-semibold text-gray-800">Fee Overview</p>
+          <p className="text-[10px] font-semibold text-gray-800">Last Exam: 87/100</p>
         </div>
-        <p className="text-[8px] text-gray-500 ml-4">Paid: 27 students · Pending: 6 students</p>
+        <p className="text-[8px] text-gray-500 ml-4">Mathematics — Mid-Term</p>
       </div>
-      <div className="border border-gray-200 rounded-lg p-2 mb-2 bg-white">
-        <div className="flex items-center gap-1.5 mb-0.5">
-          <div className="w-3 h-3 rounded-full border border-gray-300" />
-          <p className="text-[10px] font-semibold text-gray-800">Upcoming Exam</p>
-        </div>
-        <p className="text-[8px] text-gray-500 ml-4">Mid Term · Mathematics · 10:00 AM · 25 March</p>
+      <p className="text-[9px] text-gray-700 font-semibold mb-1">Pending Homework</p>
+      <div className="flex items-center gap-1 mb-3 border border-orange-200 bg-orange-50 rounded p-1">
+        <div className="bg-orange-400 text-[8px] text-white px-1.5 py-0.5 rounded">Physics</div>
+        <span className="text-[8px] text-gray-500">Chapter 5 Notes</span>
       </div>
-      <p className="text-[9px] text-gray-700 font-semibold mb-1">Announcements</p>
-      <div className="border border-gray-200 rounded p-1.5 mb-3">
-        <p className="text-[8px] text-gray-300">Type message to students/parents…</p>
+      <button className="w-full border border-gray-300 rounded text-[9px] py-1.5 text-gray-600 mb-3">
+        View All Assignments
+      </button>
+      <p className="text-[9px] text-gray-700 font-semibold mb-1">Fee Status</p>
+      <div className="border border-green-200 rounded p-1.5 mb-3">
+        <p className="text-[8px] text-green-600 font-semibold">Paid ✓ — Nov 2025</p>
+      </div>
+      <p className="text-[9px] text-gray-700 font-semibold mb-1">Class Timetable</p>
+      <div className="border border-gray-200 rounded p-1.5 mb-3 flex items-center justify-between">
+        <p className="text-[9px] text-gray-600">Monday – Friday</p>
+        <span className="text-gray-400 text-[10px]">▾</span>
       </div>
       <div className="flex gap-2">
         <button className="flex-1 bg-blue-500 text-white text-[9px] py-1.5 rounded-md font-semibold">
-          Send to Parents
+          Message Parent
         </button>
-        <button className="flex-1 bg-gray-900 text-white text-[9px] py-1.5 rounded-md font-semibold">
-          Mark Attendance
+        <button className="flex-1 bg-primary text-white text-[9px] py-1.5 rounded-md font-semibold">
+          Full Profile
         </button>
       </div>
     </div>
@@ -252,10 +262,10 @@ export default function DashboardSection() {
   return (
     <section ref={sectionRef} className="bg-black w-full">
       {/* Heading */}
-      
+
       <div className="text-center pt-20 pb-10 px-6">
         <h2 className="text-3xl lg:text-4xl font-medium text-white">
-          {["Your", "School", "Dashboard,"].map((word, i) => (
+          {["Manage", "Your", "School,"].map((word, i) => (
             <span
               key={i}
               className="dash-word text-white inline-block"

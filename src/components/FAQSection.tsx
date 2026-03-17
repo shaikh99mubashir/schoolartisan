@@ -11,27 +11,27 @@ const faqs = [
   {
     question: "What is School Artisan?",
     answer:
-      "School Artisan is an all-in-one school management system (School ERP) and website solution that lets you manage admissions, attendance, fees, exams, results, circulars and parent communication from a single platform.",
+      "School Artisan is a complete school management system designed for K-12 schools, colleges, and coaching centers. It covers student management, attendance, exams, fee collection, e-learning, library, transport, and much more—all in one beautifully designed platform.",
   },
   {
-    question: "Which types of institutions is this system suitable for?",
+    question: "Who is School Artisan suitable for?",
     answer:
-      "The platform is designed for private schools, academies, colleges, daycare centers, Islamic schools, coaching centers and multi-branch school networks—with the ability to scale from a few students to thousands.",
+      "School Artisan is built for all types of educational institutions—primary schools, high schools, colleges, universities, coaching centers, and training institutes. It supports multiple user roles including Admin, Teachers, Students, Parents, Accountants, and Librarians.",
   },
   {
-    question: "Do parents get a mobile / web portal?",
+    question: "Can I try it before purchasing?",
     answer:
-      "Yes, parents get dedicated access where they can view their child&apos;s attendance, homework, announcements, fee status, exam results and the school calendar.",
+      "Absolutely! We offer a full hands-on demo with sample data so you can explore every feature—including the student portal, parent app, admin dashboard, and more—before making any commitment.",
   },
   {
-    question: "Do you provide training and ongoing support?",
+    question: "What modules are included in School Artisan?",
     answer:
-      "We provide training for teachers and office staff during implementation, and offer ongoing support via WhatsApp, calls and remote sessions.",
+      "School Artisan includes 29+ modules: Student Management, Attendance, Examinations, Fee Management, E-Learning (Homework, Online Exams, Live Classes), Library Management, Transport, Hostel, Timetable, SMS Notifications, and more.",
   },
   {
-    question: "How does the pricing work?",
+    question: "Is training and technical support available?",
     answer:
-      "Pricing is customized based on your student strength, required modules (ERP, website, SMS/WhatsApp) and number of branches. You&apos;ll receive a detailed quotation after the demo.",
+      "Yes. We provide detailed documentation, video tutorials, and a dedicated support team to help you set up and get the most out of School Artisan. Ongoing updates and new features are included at no extra cost.",
   },
 ];
 

@@ -12,37 +12,37 @@ import "swiper/css";
 const testimonials = [
   {
     quote:
-      "School Artisan has transformed our entire school administration. Attendance, fees and exams are now managed in one place—we have reduced paperwork by almost 60%.",
-    name: "Mrs. Rukhsana Tariq",
-    role: "Principal, Al-Huda Public School",
+      "School Artisan completely transformed how we run our institution. Managing 1,200+ students used to be a nightmare—now everything from admissions to fee collection is smooth and paperless.",
+    name: "Muhammad Tariq",
+    role: "Principal, Al-Noor Academy",
     bgColor: "from-blue-100 to-blue-50",
   },
   {
     quote:
-      "Parents now receive real-time updates through the portal. They no longer need to call the school separately for homework, exam dates or fee reminders.",
-    name: "Sir Ahmed Khan",
-    role: "Coordinator, The Knowledge School",
+      "The attendance tracking and parent notification system is a game changer. Parents now get instant alerts if their child is absent, and our attendance rate has improved by 18% since we started using School Artisan.",
+    name: "Sana Rehman",
+    role: "Vice Principal, Beacon House School",
     bgColor: "from-blue-100 to-blue-200",
   },
   {
     quote:
-      "Previously we relied on multiple registers, Excel files and manual slips for fees and accounts. With School Artisan, our finance reports are generated in seconds.",
-    name: "Mrs. Mehwish Anwar",
-    role: "Account Officer, City Grammar School",
+      "I used to spend hours compiling exam results and printing report cards manually. Now the system does it automatically. The exam management module alone has saved our staff countless hours every term.",
+    name: "Asif Mahmood",
+    role: "Head of Academics, City Grammar School",
     bgColor: "from-blue-50 to-blue-100",
   },
   {
     quote:
-      "Implementation was smooth—the team trained our staff thoroughly. Within one week we moved from a manual system to a fully digital ERP without disruption.",
-    name: "Sir Salman Iqbal",
-    role: "Administrator, Allied School Campus",
+      "Our fee collection used to be chaotic with lots of missing receipts and unpaid dues. School Artisan's fee management module keeps everything organized—pending fees, overdue notices, and payment history are all at my fingertips.",
+    name: "Amina Siddiqui",
+    role: "Accounts Officer, Roots International",
     bgColor: "from-blue-100 to-blue-50",
   },
   {
     quote:
-      "Our school website now looks professional—online admission forms, gallery and news updates have significantly increased new admission enquiries.",
-    name: "Ms. Ayesha Noor",
-    role: "Owner, Bright Future School",
+      "The parent portal is truly outstanding. Parents love being able to check their child's homework, timetable, and attendance from their phone. It has reduced calls to the front office by over 60%.",
+    name: "Khalid Mehmood",
+    role: "IT Coordinator, The Educators",
     bgColor: "from-blue-100 to-blue-200",
   },
 ];
@@ -131,16 +131,16 @@ export default function TestimonialsSection() {
               ))}
               <br />
               <span className="testi-word text-primary inline-block" style={{ marginRight: "0.25em" }}>
-                Successful
+                School
               </span>{" "}
-              <span className="testi-word text-secondary inline-block">Clients</span>
+              <span className="testi-word text-secondary inline-block">Administrators</span>
             </h2>
             <p className="testi-sub mt-4 text-gray-500 text-sm max-w-sm leading-relaxed">
               See{" "}
               <span className="text-gray-700">
-                why agencies, solo marketers, and brands choose{" "}
+                why schools, colleges, and coaching centers trust{" "}
               </span>
-              <strong>Smart Media</strong> to supercharge their ad performance.
+              <strong>School Artisan</strong> to manage their daily operations.
             </p>
           </div>
 
@@ -173,7 +173,7 @@ export default function TestimonialsSection() {
               1024: { slidesPerView: 2.2, spaceBetween: 24 },
               1280: { slidesPerView: 2.5, spaceBetween: 24 },
             }}
-            className="!overflow-visible"
+            className="overflow-visible!"
           >
             {testimonials.map((t, i) => (
               <SwiperSlide key={i}>

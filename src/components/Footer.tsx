@@ -4,8 +4,8 @@ import { ArrowUp } from "lucide-react";
 
 const platformLinks = [
   { label: "Home", href: "/#hero" },
-  { label: "School ERP", href: "/#school-erp" },
   { label: "Features", href: "/#features" },
+  { label: "Modules", href: "/#modules" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Testimonials", href: "/#testimonials" },
   { label: "FAQs", href: "/#faqs" },
@@ -82,7 +82,7 @@ export default function Footer() {
           {/* Left: Headline */}
           <div className="lg:col-span-1 flex flex-col justify-between">
             <h2 className="text-3xl lg:text-4xl font-medium leading-tight text-gray-900">
-              {["Ready", "To", "Digitize"].map((word, i) => (
+              {["Ready", "To", "Transform"].map((word, i) => (
                 <span
                   key={i}
                   className="footer-word text-gray-900 inline-block"
@@ -96,7 +96,7 @@ export default function Footer() {
               <span className="footer-word text-secondary inline-block" style={{ marginRight: "0.25em" }}>
                 School
               </span>
-              <span className="footer-word text-primary inline-block">Management?</span>
+              <span className="footer-word text-primary inline-block">Today?</span>
             </h2>
           </div>
 
