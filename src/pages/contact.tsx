@@ -65,7 +65,7 @@ export default function ContactPage() {
           {/* Left content */}
           <div className="flex flex-col gap-6">
             <h1 className="text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight">
-              Let&apos;s Talk.
+              Let&apos;s Talk...
               <br />
               <span className="text-primary">We&apos;re Here To Help You Digitize Your School.</span>
             </h1>
