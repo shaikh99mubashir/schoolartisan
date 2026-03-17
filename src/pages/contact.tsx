@@ -51,11 +51,14 @@ export default function ContactPage() {
     <>
       <Head>
         <title>Contact Us – School Artisan</title>
-        <meta
-          name="description"
-          content="Contact School Artisan to book a live demo of the school management system or to ask any question about pricing, implementation and support."
-        />
+        <meta name="description" content="Contact School Artisan to book a live demo of the school management system or to ask any question about pricing, implementation and support." />
         <meta name="robots" content="index,follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contact Us – School Artisan" />
+        <meta property="og:description" content="Book a live demo or ask about pricing, implementation and support for School Artisan school management system." />
+        <meta property="og:url" content="https://schoolartisan.com/contact" />
+        <meta name="twitter:title" content="Contact Us – School Artisan" />
+        <meta name="twitter:description" content="Book a live demo or ask about pricing, implementation and support for School Artisan school management system." />
       </Head>
       <main className="min-h-screen bg-white flex flex-col">
         <Header />

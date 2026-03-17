@@ -7,11 +7,12 @@ export default function PrivacyPolicy() {
     <>
       <Head>
         <title>Privacy Policy – School Artisan</title>
-        <meta
-          name="description"
-          content="Read the Privacy Policy for School Artisan, the school management system and website solution. Learn how we collect, use and protect school and student data."
-        />
+        <meta name="description" content="Read the Privacy Policy for School Artisan, the school management system and website solution. Learn how we collect, use and protect school and student data." />
         <meta name="robots" content="noindex,follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Privacy Policy – School Artisan" />
+        <meta property="og:description" content="Learn how School Artisan collects, uses and protects school and student data." />
+        <meta property="og:url" content="https://schoolartisan.com/privacy-policy" />
       </Head>
       <main className="min-h-screen bg-white flex flex-col">
         <Header />

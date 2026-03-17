@@ -7,11 +7,12 @@ export default function TermsAndConditions() {
     <>
       <Head>
         <title>Terms &amp; Conditions – School Artisan</title>
-        <meta
-          name="description"
-          content="Read the Terms and Conditions for using School Artisan, the school management system and website solution for schools and educational institutions."
-        />
+        <meta name="description" content="Read the Terms and Conditions for using School Artisan, the school management system and website solution for schools and educational institutions." />
         <meta name="robots" content="noindex,follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Terms & Conditions – School Artisan" />
+        <meta property="og:description" content="Terms and Conditions for using School Artisan school management system and website solution." />
+        <meta property="og:url" content="https://schoolartisan.com/terms-and-conditions" />
       </Head>
       <main className="min-h-screen bg-white flex flex-col">
         <Header />

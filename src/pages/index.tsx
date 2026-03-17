@@ -27,17 +27,11 @@ export default function Home() {
         />
         <meta name="robots" content="index,follow" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="School Artisan – Smart School Management System"
-        />
-        <meta
-          property="og:description"
-          content="Digitize your school with a modern School ERP: attendance, fees, exams, report cards and parent app – all in one place."
-        />
+        <meta property="og:title" content="School Artisan – Smart School Management System" />
+        <meta property="og:description" content="Digitize your school with a modern School ERP: attendance, fees, exams, report cards and parent app – all in one place." />
         <meta property="og:url" content="https://schoolartisan.com/" />
-        <meta property="og:site_name" content="School Artisan" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="School Artisan – Smart School Management System" />
+        <meta name="twitter:description" content="Digitize your school with a modern School ERP: attendance, fees, exams, report cards and parent app – all in one place." />
       </Head>
       <main className="min-h-screen bg-white">
         <Header />
