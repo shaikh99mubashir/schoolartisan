@@ -30,11 +30,11 @@ export default function Home() {
         <meta property="og:title" content="School Artisan – Smart School Management System" />
         <meta property="og:description" content="Digitize your school with a modern School ERP: attendance, fees, exams, report cards and parent app – all in one place." />
         <meta property="og:url" content="https://schoolartisan.com/" />
-        <meta property="og:image"  content="/og-image.jpg" />
+        <meta property="og:image"  content="https://schoolartisan.vercel.app/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="/og-image.jpg" />
+        <meta name="twitter:image" content="https://schoolartisan.vercel.app/og-image.jpg" />
         <meta name="twitter:title" content="School Artisan – Smart School Management System" />
         <meta name="twitter:description" content="Digitize your school with a modern School ERP: attendance, fees, exams, report cards and parent app – all in one place." />
       </Head>
