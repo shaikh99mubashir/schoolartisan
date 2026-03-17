@@ -14,7 +14,8 @@
       "Bash(sips --cropToHeightWidth 120 560 /Users/mubashir/Documents/Projects/schoolartisan/public/logo.png)",
       "Bash(sips --cropToHeightWidth 200 200 /Users/mubashir/Documents/Projects/schoolartisan/public/icon.png)",
       "Bash(npx --yes sharp-cli --input public/logo.svg --output public/logo.png resize 560 120 --fit inside --background \"transparent\")",
-      "Bash(npx sharp-cli:*)"
+      "Bash(npx sharp-cli:*)",
+      "Bash(ls c:/schoolartisan/public/og-image*)"
     ]
   }
 }
