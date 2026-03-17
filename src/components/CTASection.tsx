@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
 
 const MiniPhone = () => (
-  <div className="w-44 h-80 bg-white rounded-[2rem] border-4 border-primary shadow-xl overflow-hidden shrink-0">
+  <div className="w-44 h-80 bg-white rounded-4xl border-4 border-primary shadow-xl overflow-hidden shrink-0">
     <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-3 bg-gray-800 rounded-full z-10" />
     <div className="pt-7 px-3 pb-3 h-full flex flex-col gap-2 relative">
       <div className="flex items-center justify-between mb-1">
