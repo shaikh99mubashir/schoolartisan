@@ -7,7 +7,8 @@
       "Bash(gh repo:*)",
       "Bash(git push:*)",
       "Bash(npm i:*)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(ls -la /Users/mubashir/Documents/Projects/schoolartisan/.env*)"
     ]
   }
 }
